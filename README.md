@@ -1,5 +1,5 @@
 Welcome to the Bulgarian Calendar Project
-====================
+=========================================
 
 <!-- Please use markdown-toc -i README.md to update the table of contents -->
 <!-- -->
