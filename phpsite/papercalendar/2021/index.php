@@ -39,7 +39,7 @@
 
 <br/><br/>
 <?php if ($lang == 'bg') : ?>
-Оттук можете да поръчате своя версия на хартиен календар за 7526/2021 година. Календарът е с размер 480 х 680 мм.<a href="#order">Към поръчка.</a>
+Оттук можете да поръчате своя версия на хартиен календар за 7526/2021 година. Календарът е с размер 480 х 680 мм. <!-- <a href="#order">Към поръчка.</a> -->
 <?php elseif ($lang == 'en') : ?>
 Here you can order your copy of paper calendar for year 7526/2021. The calendar size is 480 x 680 mm.<a href="#order">Order here.</a>
 <?php elseif ($lang == 'de') : ?>
@@ -201,6 +201,7 @@ Vorschau
   <br/>
   <br/>
   <br/>
+  <!--
    <script>
      function roundDecimal(value, precision) {
        var drob = value % 100; 
@@ -320,6 +321,7 @@ Vorschau
    </table>
    </form>
    <script> recalc(); </script>
+-->
 
 </div>
 <br/>
