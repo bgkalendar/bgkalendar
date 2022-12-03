@@ -45,22 +45,22 @@
     <?php if ($lang == 'bg') :?>
  
       Здравейте <?php echo $recipient; ?>,<br/><br/>
-      Поръчката, която направихте през <a href="https://bgkalendar.com/papercalendar/2021">Българският Календар</a> за <?php echo $count;?> броя календари на стойност <?php echo $price;?> лева (цената на доставка се заплаща допълнително) е приета.
+      Поръчката, която направихте през <a href="https://bgkalendar.com/papercalendar/2023">Българският Календар</a> за <?php echo $count;?> броя календари на стойност <?php echo $price;?> лева (цената на доставка се заплаща допълнително) е приета.
 
   <?php elseif ($lang == 'en') :?>
 
       Hello <?php echo $recipient; ?>,<br/><br/>
-      The order, you have made through <a href="https://bgkalendar.com/papercalendar/2021">The Bulgarian Calendar</a> for <?php echo $count;?> calendars for <?php echo $proce;?> levs (delivery price not included) has been accepted.
+      The order, you have made through <a href="https://bgkalendar.com/papercalendar/2023">The Bulgarian Calendar</a> for <?php echo $count;?> calendars for <?php echo $proce;?> levs (delivery price not included) has been accepted.
 
   <?php elseif ($lang == 'de') :?>
 
       Hallo <?php echo $recipient; ?>,<br/><br/>
-      Die Bestellung, die Sie über <a href="https://bgkalendar.com/papercalendar/2021">den bulgarischen Kalender</a> für <?php echo $count;?> Kalender für <?php echo $proce;?> Levs (lieferpreis nicht inbegriffen) getätigt haben, wurde angenommen
+      Die Bestellung, die Sie über <a href="https://bgkalendar.com/papercalendar/2023">den bulgarischen Kalender</a> für <?php echo $count;?> Kalender für <?php echo $proce;?> Levs (lieferpreis nicht inbegriffen) getätigt haben, wurde angenommen
 
   <?php elseif ($lang == 'ru') :?>
 
       Здравствуйте <?php echo $recipient; ?>,<br/><br/>
-      Заказ, сделанный вами через <a href="https://bgkalendar.com/papercalendar/2021">Болгарский календарь</a> на <?php echo $count;?> календарей за <?php echo $proce;?> левов (без стоимости доставки), принят.
+      Заказ, сделанный вами через <a href="https://bgkalendar.com/papercalendar/2023">Болгарский календарь</a> на <?php echo $count;?> календарей за <?php echo $proce;?> левов (без стоимости доставки), принят.
 
   <?php else :?>
   <?php endif;?>

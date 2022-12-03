@@ -9,7 +9,7 @@
       Здравейте <?php echo $recipient; ?>,
        
       Поръчката, която направихте през 
-      [Българският Календар](https://bgkalendar.com/papercalendar/2021)
+      [Българският Календар](https://bgkalendar.com/papercalendar/2023)
       за <?php echo $count;?> броя календари на стойност <?php echo $price;?> лева 
       (цената на доставка се заплаща допълнително) е приета.
 
@@ -18,7 +18,7 @@
       Hello <?php echo $recipient; ?>,
       
       The order, you have made through 
-      [The Bulgarian Calendar](https://bgkalendar.com/papercalendar/2021)
+      [The Bulgarian Calendar](https://bgkalendar.com/papercalendar/2023)
       for <?php echo $count;?> calenders for <?php echo $proce;?> levs 
       (delivery price not included) has been accepted.
 
@@ -27,7 +27,7 @@
       Hallo <?php echo $recipient; ?>,
       
       Die Bestellung, die Sie über 
-      [Den Bulgarischen Kalender](https://bgkalendar.com/papercalendar/2021)
+      [Den Bulgarischen Kalender](https://bgkalendar.com/papercalendar/2023)
       für <?php echo $count;?> Kalender für <?php echo $proce;?> Levs (lieferpreis nicht inbegriffen) 
       getätigt haben, wurde angenommen
 
@@ -36,13 +36,13 @@
       Здравствуйте <?php echo "$recipient"; ?>,
       
       Заказ, сделанный вами через 
-      [Болгарский календарь](https://bgkalendar.com/papercalendar/2021) 
+      [Болгарский календарь](https://bgkalendar.com/papercalendar/2023) 
       на <?php echo $count;?> календарей за <?php echo $proce;?> левов (без стоимости доставки), принят.
 
   <?php else :?>
 
       Поръчката, която направихте през 
-      [Българският Календар](https://bgkalendar.com/papercalendar/2021)
+      [Българският Календар](https://bgkalendar.com/papercalendar/2023)
       за <?php echo $count;?> броя календари на стойност <?php echo $price;?> лева 
       (цената на доставка се заплаща допълнително) е приета.
 
