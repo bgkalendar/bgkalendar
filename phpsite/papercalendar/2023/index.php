@@ -64,32 +64,32 @@ Vorschau
 <center>
 <!-- <a href="../../?lang=<?php tr('bg', 'en', 'de', 'ru');?>" width="50%" style="width: 60px;"><?php tr('Обратно', 'Back', 'Zurück gehen', 'Вернитесь')?></a> -->
 <br/>
-<a href="bgkalendar-2023-bg-preview.png">
-<img style="max-width: 90%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" src="bgkalendar-2023-bg-preview.png"/>
+<a href="bgkalendar-2023-bg-preview-mb.png">
+<img style="max-width: 90%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" src="bgkalendar-2023-bg-preview-mb.png"/>
 </a>
 <br/>
 <!-- <a href="../../?lang=<?php tr('bg', 'en', 'de', 'ru');?>" width="50%" style="width: 60px;"><?php tr('Обратно', 'Back', 'Zurück gehen', 'Вернитесь')?></a> -->
 </center>
 <div style="margin: 2em; align: auto;">
   <?php if ($lang == 'bg') : ?>
-    Свали като <a href="bgkalendar-2023-bg.svg">SVG (Оригинал)</a>, 
-    <a href="bgkalendar-2023-bg.png">PNG</a> или 
-    <a href="bgkalendar-2023-bg.pdf">PDF</a>.
+    Свали като <a href="bgkalendar-2023-bg-mb.svg">SVG (Оригинал)</a>, 
+    <a href="bgkalendar-2023-bg-mb.png">PNG</a> или 
+    <a href="bgkalendar-2023-bg-mb.pdf">PDF</a>.
     <br/><br/>
   <?php elseif ($lang == 'en') : ?>
-    Download as <a href="kalendar-2023-bg.svg">SVG (Original)</a>, 
-    <a href="bgkalendar-2023-bg.png">PNG</a> or 
-    <a href="bgkalendar-2023-bg.pdf">PDF</a>.
+    Download as <a href="kalendar-2023-bg-mb.svg">SVG (Original)</a>, 
+    <a href="bgkalendar-2023-bg-mb.png">PNG</a> or 
+    <a href="bgkalendar-2023-bg-mb.pdf">PDF</a>.
     <br/><br/>
   <?php elseif ($lang == 'de') : ?>
-    Download als <a href="kalendar-2023-bg.svg">SVG (Original)</a>, 
-    <a href="bgkalendar-2023-bg.png">PNG</a> oder 
-    <a href="bgkalendar-2023-bg.pdf">PDF</a>.
+    Download als <a href="kalendar-2023-bg-mb.svg">SVG (Original)</a>, 
+    <a href="bgkalendar-2023-bg-mb.png">PNG</a> oder 
+    <a href="bgkalendar-2023-bg-mb.pdf">PDF</a>.
     <br/><br/>
   <?php elseif ($lang == 'ru') : ?>
-     Скачать как <a href="bgkalendar-2023-bg.svg">SVG (Оригиналь)</a>, 
-    <a href="bgkalendar-2023-bg.png">PNG</a> или
-    <a href="bgkalendar-2023-bg.pdf">PDF</a>.
+     Скачать как <a href="bgkalendar-2023-bg-mb.svg">SVG (Оригиналь)</a>, 
+    <a href="bgkalendar-2023-bg-mb.png">PNG</a> или
+    <a href="bgkalendar-2023-bg-mb.pdf">PDF</a>.
     <br/><br/>
   <?php endif ?>
   
@@ -103,7 +103,6 @@ Vorschau
   <br/>
   <br/>
   <br/>
-  <!--
    <script>
      function roundDecimal(value, precision) {
        var drob = value % 100; 
@@ -223,7 +222,6 @@ Vorschau
    </table>
    </form>
    <script> recalc(); </script>
--->
 
 </div>
 <br/>

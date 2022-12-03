@@ -148,22 +148,20 @@
     Для получения дополнительной информации, пожалуйста, <a href="https://kitkazdravets.bg/%D0%B1%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8%D1%8F%D1%82-%D0%BA%D0%B0%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80">смотрите здесь</a>.
   <?php endif ?>
 </div>
+-->
 <div style="border-radius: 1em; border: 1px solid green; background: lightblue; max-width: 80%; min-height: 3em; padding: 1em; text-align: center;">
   <?php if ($lang == 'bg') : ?>
-    За да получите своя версия на хартиен календар (еднолистов формат А2) за <b>7526/2021</b> моля свържете се със <u>admin [а] bgkalendar.com</u> .<br/>
-    <a href="papercalendar/2021?lang=bg">Виж повече</a>
+    За да получите своя версия на хартиен календар (еднолистов формат А2) за <b>7528/2023</b> моля свържете се със <u>admin [а] bgkalendar.com</u> или поръчайте <a href="papercalendar/2023?lang=bg">оттук</a>.<br/>
+    <a href="papercalendar/2023?lang=bg">Виж повече</a>
   <?php elseif ($lang == 'en') : ?>
-    In order to obtain your printed version of the Bulgarian calendar (format A2) for 7526, please contact <u>admin [а] bgkalendar.com</u> .<br/>
+    In order to obtain your printed version of the Bulgarian calendar (format A2) for 7528, please contact <u>admin [а] bgkalendar.com</u> .<br/>
     <a href="papercalendar/2021?lang=en">More</a>
   <?php elseif ($lang == 'de') : ?>
-    Um Ihre gedruckte Version des bulgarischen Kalenders (Format A2) für 7526 zu erhalten, wenden Sie sich bitte an <u>admin [а] bgkalendar.com</u>.<br/>
+    Um Ihre gedruckte Version des bulgarischen Kalenders (Format A2) für 7528 zu erhalten, wenden Sie sich bitte an <u>admin [а] bgkalendar.com</u>.<br/>
   <?php elseif ($lang == 'ru') : ?>
-    Чтобы получить свою печатную версию болгарского календаря (Формат A2) на 7526, свяжитесь с <u>admin [а] bgkalendar.com</u> .
+    Чтобы получить свою печатную версию болгарского календаря (Формат A2) на 7528, свяжитесь с <u>admin [а] bgkalendar.com</u> .
   <?php endif ?>
 </div>
-<br/><br/>
-<br/><br/>
--->
 <br/>
 <br/>
 <div class="treemonths">
