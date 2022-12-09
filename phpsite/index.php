@@ -152,7 +152,45 @@
 <div style="border-radius: 1em; border: 1px solid green; background: lightblue; max-width: 80%; min-height: 3em; padding: 1em; text-align: center;">
   <?php if ($lang == 'bg') : ?>
     За да получите своя версия на хартиен календар (еднолистов формат А2) за <b>7528/2023</b> моля свържете се със <u>admin [а] bgkalendar.com</u> или поръчайте <a href="papercalendar/2023?lang=bg">оттук</a>.<br/>
-    <a href="papercalendar/2023?lang=bg">Виж повече</a>
+    <a href="papercalendar/2023?lang=bg">Виж повече</a><br/>
+     <span id="timeNewYear">xxx</span>
+     <script>
+     function calculateTimeTillNewYear(reload) {
+       var newYear = 1671660000000;1
+       var now = Date.now();
+       var remaining = newYear - now;
+       var span = document.getElementById("timeNewYear");
+       if (remaining <= 0) {
+         if (span != null) {
+            span.innerHTML = "";
+         }
+         if (reload) {
+           location.reload();
+         }
+         return;
+       } else {
+         var days = 0;
+         var hours = 0;
+         var minutes = 0;
+         var rem = remaining % (24 * 60 * 60 * 1000);
+         days = (remaining - rem) / (24 * 60 * 60 * 1000);
+         remaining = rem;
+         rem = remaining % (60 * 60 * 1000);
+         hours = (remaining - rem)/ ( 60 * 60 * 1000);
+         remaining = rem;
+         rem  = remaining % (60 * 1000);
+         minutes = (remaining -rem )/ (60 * 1000);
+         remaining = rem;
+         rem = remaining % 1000;
+         secs = (remaining - rem) / 1000;
+         if (span != null) {
+           span.innerHTML = "Оставащо време до новогодишният ден по Дреният Български Календар: <br/>" + days + " дена " + hours + " часа " + minutes + " минути и " + secs + " секунди";
+           setTimeout("calculateTimeTillNewYear(true)", 1000);
+         }
+      }
+    }
+    calculateTimeTillNewYear(false);
+    </script>
   <?php elseif ($lang == 'en') : ?>
     In order to obtain your printed version of the Bulgarian calendar (format A2) for 7528, please contact <u>admin [а] bgkalendar.com</u> .<br/>
     <a href="papercalendar/2021?lang=en">More</a>
