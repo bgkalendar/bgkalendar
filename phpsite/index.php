@@ -153,6 +153,14 @@
   <?php if ($lang == 'bg') : ?>
     За да получите своя версия на хартиен календар (еднолистов формат А2) за <b>7528/2023</b> моля свържете се със <u>admin [а] bgkalendar.com</u> или поръчайте <a href="papercalendar/2023?lang=bg">оттук</a>.<br/>
     <a href="papercalendar/2023?lang=bg">Виж повече</a><br/>
+  <?php elseif ($lang == 'en') : ?>
+    In order to obtain your printed version of the Bulgarian calendar (format A2) for 7528, please contact <u>admin [а] bgkalendar.com</u> .<br/>
+    <a href="papercalendar/2021?lang=en">More</a>
+  <?php elseif ($lang == 'de') : ?>
+    Um Ihre gedruckte Version des bulgarischen Kalenders (Format A2) für 7528 zu erhalten, wenden Sie sich bitte an <u>admin [а] bgkalendar.com</u>.<br/>
+  <?php elseif ($lang == 'ru') : ?>
+    Чтобы получить свою печатную версию болгарского календаря (Формат A2) на 7528, свяжитесь с <u>admin [а] bgkalendar.com</u> .
+  <?php endif ?>
      <span id="timeNewYear">xxx</span>
      <script>
      function calculateTimeTillNewYear(reload) {
@@ -182,23 +190,23 @@
          minutes = (remaining -rem )/ (60 * 1000);
          remaining = rem;
          rem = remaining % 1000;
-         secs = (remaining - rem) / 1000;
+         var secs = (remaining - rem) / 1000;
+         if (secs < 10) {
+           secs = "0" + secs;
+         }
          if (span != null) {
-           span.innerHTML = "Оставащо време до новогодишният ден по Дреният Български Календар: <br/>" + days + " дена " + hours + " часа " + minutes + " минути и " + secs + " секунди";
+           span.innerHTML = "<?php tr('Оставащо време до новогодишният ден по Дреният Български Календар:', 'Remaining time until New Year\'s Day according to the Old Bulgarian Calendar', 
+                                      'Verbleibende Zeit bis Neujahr nach dem alten bulgarischen Kalender', 'Оставшееся время до Нового года по староболгарскому календарю'); ?> <br/>" 
+              + ( days    > 0 ?  days    + " <?php tr('дена', 'days', 'Tage', 'дня'); ?> "         : "")
+              + ( hours   > 0 ?  hours   + " <?php tr('часа', 'hours', 'Stunden', 'часов'); ?> "   : "") 
+              + ( minutes > 0 ?  minutes + " <?php tr('минути и', 'minutes and', 'Minuten und', 'минут и');?> " : "")
+              + secs    + " <?php tr('секунди', 'seconds', 'Sekunden', 'секунд');?>";
            setTimeout("calculateTimeTillNewYear(true)", 1000);
          }
       }
     }
     calculateTimeTillNewYear(false);
     </script>
-  <?php elseif ($lang == 'en') : ?>
-    In order to obtain your printed version of the Bulgarian calendar (format A2) for 7528, please contact <u>admin [а] bgkalendar.com</u> .<br/>
-    <a href="papercalendar/2021?lang=en">More</a>
-  <?php elseif ($lang == 'de') : ?>
-    Um Ihre gedruckte Version des bulgarischen Kalenders (Format A2) für 7528 zu erhalten, wenden Sie sich bitte an <u>admin [а] bgkalendar.com</u>.<br/>
-  <?php elseif ($lang == 'ru') : ?>
-    Чтобы получить свою печатную версию болгарского календаря (Формат A2) на 7528, свяжитесь с <u>admin [а] bgkalendar.com</u> .
-  <?php endif ?>
 </div>
 <br/>
 <br/>
