@@ -71,7 +71,7 @@ class LetoGregorian extends LetoBase {
     
     public function calculateCalendarPeriods($days) {
       if ($days < 0) {
-         $days = 0 - $days;
+         $days = 0 - $days -1;
          $this->AC = false; // Before Christ - BC;
          $periods = parent::calculateCalendarPeriods($days);
          $periods[1] = new LetoGregorianMonthPeriodBc($periods[1]);
