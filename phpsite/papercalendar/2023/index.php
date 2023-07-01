@@ -144,6 +144,7 @@ Vorschau
   <?php elseif ($lang == 'ru') : ?>
   <?php endif ?>
 
+<!--
   <br/>
   <br/>
   <br/>
@@ -269,6 +270,7 @@ Vorschau
 
 </div>
 <br/>
+-->
 <br/>
 <br/>
 <br/>

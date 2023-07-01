@@ -149,13 +149,14 @@
   <?php endif ?>
 </div>
 -->
+<!--
 <div style="border-radius: 1em; border: 1px solid green; background: lightblue; max-width: 80%; min-height: 3em; padding: 1em; text-align: center;">
   <?php if ($lang == 'bg') : ?>
     За да получите своя версия на хартиен календар (еднолистов формат А2) за <b>7528/2023</b> моля свържете се със <u>admin [а] bgkalendar.com</u> или поръчайте <a href="papercalendar/2023?lang=bg">оттук</a>.<br/>
     <a href="papercalendar/2023?lang=bg">Виж повече</a><br/>
   <?php elseif ($lang == 'en') : ?>
     In order to obtain your printed version of the Bulgarian calendar (format A2) for 7528, please contact <u>admin [а] bgkalendar.com</u> .<br/>
-    <a href="papercalendar/2021?lang=en">More</a>
+    <a href="papercalendar/2023?lang=en">More</a>
   <?php elseif ($lang == 'de') : ?>
     Um Ihre gedruckte Version des bulgarischen Kalenders (Format A2) für 7528 zu erhalten, wenden Sie sich bitte an <u>admin [а] bgkalendar.com</u>.<br/>
   <?php elseif ($lang == 'ru') : ?>
@@ -208,6 +209,7 @@
     calculateTimeTillNewYear(false);
     </script>
 </div>
+-->
 <br/>
 <br/>
 <div class="treemonths">
