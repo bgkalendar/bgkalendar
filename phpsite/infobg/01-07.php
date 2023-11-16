@@ -2,7 +2,7 @@
 Ден с който започва третото тримесечие и второто полугодие на годината по Древния Български Календар. 
 На този ден се чества лятното слънцестоене. Денят е най-дълъг, а нощта най-кратка. <br/><br/>
 Предполагаем аналог на празника е съвременният 
-<a href="https://bg.wikipedia.org/wiki/%D0%95%D0%BD%D1%8C%D0%BE%D0%B2%D0%B4%D0%B5%D0%BD">Еньовден</a> (или <i>Яньовден</i>), празнува се от православната църква като <a href="http://bg-patriarshia.bg/calendar.php?month=5">Рождение на свети Йоан Кръстител </a> на 24<sup>-ти</sup> юни.<br/><br/>
+<a href="https://bg.wikipedia.org/wiki/%D0%95%D0%BD%D1%8C%D0%BE%D0%B2%D0%B4%D0%B5%D0%BD">Еньовден</a> (или <i>Яньовден</i>), празнува се от православната църква като <a href="https://www.pravoslavieto.com/life/06.24_rozhdestvo_Joan_Predtecha.htm">Рождение на свети Йоан Кръстител </a> на 24<sup>-ти</sup> юни.<br/><br/>
 Според том 3 от етнография на България, за този ден се вярва, че тогава слънцето, тревата и птиците "инясуват", тоест слънцето престава да грее силно, тревата престава да расте, а птиците да пеят.
 <br/><br/>
 <a href="links/daobgkalendar.pdf">Георги Велев</a> намира връзка с източните категории "Ин" (тъмна пасивна енергия) и "Ян" (светла активна енергия). Инясуването логично изразява прехода от от активна (ян) енергия в пасивност (ин). Не случайно според народното поверие билките трябва да се берат на Еньовден - логично, защото до този момент те са насъбрали най-много от активната живителна енергия (ян) и действието им е най-силно. 
@@ -61,12 +61,12 @@ Der Name "Janjova" bringt uns wieder zum Gedanken an die helle aktive Energie (Y
 
 
 <?php if ($lang == 'bg') : ?>
- Вижте също книгата на Георги Велев <a href="http://bookshop.bg/bg/knigi/nehudojestveni-izdanija/folklor-i-etnologija/narodniqt-kalendar-i-negovite-praznici-23917">Народният календар и неговите празници</a>.
+ Вижте също книгата на Георги Велев <a href="https://www.ozone.bg/product/narodniyat-kalendar-i-negovite-praznitsi/">Народният календар и неговите празници</a>.
 <?php elseif ($lang == 'en') : ?>
-Please also see the book from Georgi Velev <a href="http://bookshop.bg/bg/knigi/nehudojestveni-izdanija/folklor-i-etnologija/narodniqt-kalendar-i-negovite-praznici-23917">"The Folk Calendar and its Holidays"</a>.
+Please also see the book from Georgi Velev <a href="https://www.ozone.bg/product/narodniyat-kalendar-i-negovite-praznitsi/">"The Folk Calendar and its Holidays"</a>.
 <?php elseif ($lang == 'de') : ?>
-Sehen Sie bitte also, der Buch von Georgi Welew <a href="http://bookshop.bg/bg/knigi/nehudojestveni-izdanija/folklor-i-etnologija/narodniqt-kalendar-i-negovite-praznici-23917">"Volkskalender und seine Feiertage"</a>.
+Sehen Sie bitte also, der Buch von Georgi Welew <a href="https://www.ozone.bg/product/narodniyat-kalendar-i-negovite-praznitsi/">"Volkskalender und seine Feiertage"</a>.
 <?php elseif ($lang == 'ru') : ?>
-Посмотрите также книгу Георгия Велева <a href="http://bookshop.bg/bg/knigi/nehudojestveni-izdanija/folklor-i-etnologija/narodniqt-kalendar-i-negovite-praznici-23917">"Народный календарь и его праздники"</a>.
+Посмотрите также книгу Георгия Велева <a href="https://www.ozone.bg/product/narodniyat-kalendar-i-negovite-praznitsi/">"Народный календарь и его праздники"</a>.
 <?php endif ?>
 

@@ -4,7 +4,7 @@
   <a href="https://bg.wikipedia.org/wiki/%D0%A1%D0%B5%D0%BA%D0%BD%D0%BE%D0%B2%D0%B5%D0%BD%D0%B8%D0%B5">Секновене</a> 
   (известен още и като <i>Секновенѐ</i>, <i>Обсичане</i>, <i>Иван Обсечен</i>, <i>Иван Коприван</i>, <i>Църн свети Йован</i>) 
   празнуван от православната църква като 
-  <a href="http://bg-patriarshia.bg/calendar.php?month=7">Отсичане главата на св. Йоан Предтеча и Кръстител</a> 
+  <a href="https://bg-patriarshia.bg/august-29">Отсичане главата на св. Йоан Предтеча и Кръстител</a> 
   на 29<sup>-ти</sup> август. 
   Макар Секновене да е отдалечено от първообраза си (есенното равноденствие) на повече от 20 дена във времето, 
   този празник все още носи символиката на оригинала.
@@ -17,7 +17,8 @@
   Това още веднъж потвърждава, че Секновене съответства на есенното слънцестоене. 
   <br/><br/>
   Вижте също книгата на Георги Велев 
-  <a href="http://bookshop.bg/bg/knigi/nehudojestveni-izdanija/folklor-i-etnologija/narodniqt-kalendar-i-negovite-praznici-23917">Народният календар и неговите празници</a>.
+  <a href="https://www.ozone.bg/product/narodniyat-kalendar-i-negovite-praznitsi/">Народният календар и неговите празници</a>.
+
 <?php elseif ($lang == 'en') : ?>
   The first day of the last - the fourth quarter of the Ancient Bulgarian Calendar - is also the day that celebrates the autumn equinox. 
   According to Georgi Velev, the supposed analogous holiday in ancient Bulgarian traditions is 
@@ -36,7 +37,8 @@
   This confirms once again that Seknovene is in line with the autumn solstice.
   <br/><br/>
   Please also see the book from Georgi Velev 
-  <a href="http://bookshop.bg/bg/knigi/nehudojestveni-izdanija/folklor-i-etnologija/narodniqt-kalendar-i-negovite-praznici-23917">"The Folk Calendar and its Holidays"</a>.
+  <a href="https://www.ozone.bg/product/narodniyat-kalendar-i-negovite-praznitsi/">"The Folk Calendar and its Holidays"</a>.
+
 <?php elseif ($lang == 'de') : ?>
   Der erste Tag des Letzten - das vierte Viertel des Altbulgarischen Kalenders - ist auch der Tag, 
   an dem die Tagundnachtgleiche im Herbst gefeiert wird.
@@ -54,7 +56,8 @@
   Dies bestätigt einmal mehr, dass Seknovene mit der Herbstsonnenwende im Einklang steht.
   <br/><br/>
   Sehen Sie bitte also, der Buch von Georgi Welew 
-  <a href="http://bookshop.bg/bg/knigi/nehudojestveni-izdanija/folklor-i-etnologija/narodniqt-kalendar-i-negovite-praznici-23917">"Volkskalender und seine Feiertage"</a>.
+  <a href="https://www.ozone.bg/product/narodniyat-kalendar-i-negovite-praznitsi/">"Volkskalender und seine Feiertage"</a>.
+
 <?php elseif ($lang == 'ru') : ?>
   Первый день последнего - четвертая четверть древнеболгарского календаря - также день празднования осеннего равноденствия. 
   Согласно Георгию Велеву, якобы аналогичным праздником в древних болгарских традициях является Секновене 
@@ -73,6 +76,6 @@
   Это еще раз подтверждает, что Секновене соответствует осеннему солнцестоянию.
   <br/><br/>
   Посмотрите также книгу Георгия Велева 
-  <a href="http://bookshop.bg/bg/knigi/nehudojestveni-izdanija/folklor-i-etnologija/narodniqt-kalendar-i-negovite-praznici-23917">"Народный календарь и его праздники"</a>.
+  <a href="https://www.ozone.bg/product/narodniyat-kalendar-i-negovite-praznitsi/">"Народный календарь и его праздники"</a>.
 <?php endif ?>
 

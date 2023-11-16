@@ -86,6 +86,8 @@ if ($velikdeninjuyear - 56 == $dayjuinjuyear) {
   $incfile='v39-spasovden';
 } else if ($velikdeninjuyear + 49 == $dayjuinjuyear) {
   $incfile='v49-petdesetnica';
+} else if ($velikdeninjuyear + 50 == $dayjuinjuyear) { 
+  $incfile='v50-sveti-duh';
 } else if ($velikdeninjuyear + 56 == $dayjuinjuyear) {
   $incfile='v56-vsisvetii';
 } else if ($velikdeninjuyear + 63 == $dayjuinjuyear) {

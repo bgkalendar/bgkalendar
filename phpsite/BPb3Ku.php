@@ -97,7 +97,7 @@
 </div>
 
 <div class="linkitem">
-<a href="http://www.bghistory.info/category/%d0%b4%d1%80%d0%b5%d0%b2%d0%bd%d0%b8%d1%82%d0%b5-%d0%b1%d1%8a%d0%bb%d0%b3%d0%b0%d1%80%d0%b8/%d0%b4%d1%80%d0%b5%d0%b2%d0%bd%d0%be%d0%b1%d1%8a%d0%bb%d0%b3%d0%b0%d1%80%d1%81%d0%ba%d0%b8%d1%8f%d1%82-%d0%ba%d0%b0%d0%bb%d0%b5%d0%bd%d0%b4%d0%b0%d1%80/">
+<a href="https://www.alenmak.org/statii.php?id=53">
   <img class="titleimg"  src="links/dilyan.ivanov.rozeta.png"/><br/>
   <?php tr('БЪЛГАРСКА ИСТОРИЯ - Древнобългарският календар', 'BULGARIAN HISTORY - The Ancient Bulgarian Calendar', 'BULGARISCHE GESCHICHTE - Der alte Bulgarische Kalender', 'ИСТОРИЯ БОЛГАРИИ - Древний болгарский календарь');?>
 </a>
@@ -172,12 +172,14 @@
 <a class="cache" href="links/Nazvaniya-na-mesecite.pdf"></a>
 </div>
 
+<!--
 <div class="linkitem">
 <a href="http://bulgaria-is-alive.com/kalendar.html">
   <img class="titleimg"  src="images/fakela.png"/><br/>
   <?php tr('Древна България е жива - ЖИВОТИНСКИ КАЛЕНДАР НА ПРАБЪЛГАРИТЕ', 'Ancient Bulgaria is alive - THE ANIMAL CALENDER OF BULGARIANS', 'Das alte Bulgarien lebt - TIERKALENDER DER PROTOBULGAREN', 'Древняя Болгария жива - ЖИВОТИНСКИЙ КАЛЕНДАРЬ ПРОТОБУЛГАРЫ');?>
 </a>
 </div>
+-->
 
 <div class="linkitem">
 <a href="https://www.youtube.com/watch?v=EujVzngonxM&feature=youtu.be&list=PLC1L34JwNaURJW3LnqdHzPCV6qGvL_GkO&t=425">
@@ -200,7 +202,7 @@
 </div>
 
 <div class="linkitem">
-<a href="http://www.bulgari-istoria-2010.com/booksBG/Prabg_kalendar.pdf">
+<a href="links/Prabg_kalendar.pdf">
   <img class="titleimg"  src="images/rozeta-pliska.svg" style="max-height: 100px; max-width: 100px;"/><br/>
   <?php tr('ДРЕВНОБЪЛГАРСКИЯТ КАЛЕНДАР – МИТОВЕ И РЕАЛНОСТИ. ПРОИЗХОД И ЗНАЧЕНИЯ НА НАЗВАНИЯТА', 'THE ANCIENT BULGARIAN CALENDAR - MYTS AND REALITIES. ORIGIN AND SIGNATURE OF THE NAMES', 'DER ANTIKE BULGARISCHE KALENDER - MYTHEN UND REALITÄTEN. HERKUNFT UND BEDEUTUNG DER NAMEN', 'ДРЕВНОБОЛГАРСКИЙ КАЛЕНДАРЬ - МИФЫ И РЕАЛИИ. ПРОИСХОЖДЕНИЕ И ЗНАЧЕНИЯ НАЗВАНИЙ');?>
 
@@ -219,10 +221,11 @@
 </div>
 
 <div class="linkitem">
-<a href="http://islan.dir.bg/_wm/library/?df=660100">
+<a href="links/islan">
   <img class="titleimg"  src="images/islan.png" style="max-height: 100px; max-width: 100px;"/><br/>
   <?php tr('БЪЛГАРСКИ КАЛЕНДАР', 'BULGARIAN CALENDAR', 'BULGARISCHER KALENDAR', 'БОЛГАРСКИЙ КАЛЕНДАРЬ');?>
 </a>
+<!-- http://islan.dir.bg/_wm/library/?df=660100" -->
 <a class="cache" href="links/islan"></a>
 </div>
 
@@ -265,6 +268,14 @@
 <a class="cache" href="links/zlatarski/"></a>
 </div>
 
+<div class="linkitem">
+<!-- <a href="https://bg-nacionalisti.org/BNF/index.php?PHPSESSID=f1bd07e67535e508514f3785ad58a85d;action=downloads;sa=view;down=2660"> -->
+<a href="https://bg-nacionalisti.org/BNF/index.php?action=downloads;sa=downfile&id=2660;t=1671706500">
+  <img class="titleimg"  src="images/rogev.png"/><br/>
+  <?php tr('Астрономически основи на прабългарското летоброене - Борис Рогев', 'Astronomical foundations of the proto-Bulgarian calendar - Boris Rogev', 'Astronomische Grundlagen des protobulgarischen Kalenders - Boris Rogew', 'Астрономические основы протоболгарского календаря - Борис Рогев');?>
+</a>
+<a class="cache" href="links/B_Rogev-Astronom-Osnovi-BG-Letobroene.pdf"></a>
+</div>
 
 <br/>
 <br/>
