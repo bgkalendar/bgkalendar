@@ -127,7 +127,7 @@ Vorschau
   Този ден не не счита като част от седмица и един вид "не се брои". 
   Годината се пада 28<sup>-ма</sup> поред година от 7<sup>-мия</sup> 60 годишен <a href="../../kalendar-bg.php?lang=bg#60g">звезден ден</a> и стихията която ѝ съответства е ЗЕМЯ, цвят ЖЪЛТ и посока ЗАПАД. 
   Година 7528 се пада година на заека известен като дван или дванш. 
-  Годината дван е засвидетелствана в <a href="https://192.168.1.200/bgkalendar/phpsite/iztochnici.php?lang=bg">именника на българските владетели</a> при владетелят (<span style="font-family: Izhitsa">Твирем.</span>) следващ непосредствено след Тервел (<span style="font-family: Izhitsa">Тервен</span>): <br/>
+  Годината дван е засвидетелствана в <a href="../../iztochnici.php?lang=bg">именника на българските владетели</a> при владетелят (<span style="font-family: Izhitsa">Твирем.</span>) следващ непосредствено след Тервел (<span style="font-family: Izhitsa">Тервен</span>): <br/>
 
   <div class="oldbg" style="text-align: left; max-width: 40em;">
      <br/> 
