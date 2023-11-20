@@ -149,8 +149,8 @@
   <?php endif ?>
 </div>
 -->
-<!--
 <div style="border-radius: 1em; border: 1px solid green; background: lightblue; max-width: 80%; min-height: 3em; padding: 1em; text-align: center;">
+<!--
   <?php if ($lang == 'bg') : ?>
     За да получите своя версия на хартиен календар (еднолистов формат А2) за <b>7528/2023</b> моля свържете се със <u>admin [а] bgkalendar.com</u> или поръчайте <a href="papercalendar/2023?lang=bg">оттук</a>.<br/>
     <a href="papercalendar/2023?lang=bg">Виж повече</a><br/>
@@ -162,10 +162,22 @@
   <?php elseif ($lang == 'ru') : ?>
     Чтобы получить свою печатную версию болгарского календаря (Формат A2) на 7528, свяжитесь с <u>admin [а] bgkalendar.com</u> .
   <?php endif ?>
-     <span id="timeNewYear">xxx</span>
+-->
+     <span id="timeNewYear">
+       <?php if ($lang == 'bg') : ?>
+         Честита Нова Година по Древния Български Календар
+       <?php elseif ($lang == 'en') : ?>
+         Happy New Year according to the Ancient Bulgarian Calendar 
+       <?php elseif ($lang == 'de') : ?>
+         Frohes neues Jahr nach dem alten bulgarischen Kalender
+       <?php elseif ($lang == 'ru') : ?>
+         Поздравление с Новым годом по древнеболгарскому календарю
+       <?php endif ?>
+     
+    </span>
      <script>
      function calculateTimeTillNewYear(reload) {
-       var newYear = 1671660000000;1
+       var newYear = 1703282400000; 
        var now = Date.now();
        var remaining = newYear - now;
        var span = document.getElementById("timeNewYear");
@@ -209,7 +221,6 @@
     calculateTimeTillNewYear(false);
     </script>
 </div>
--->
 <br/>
 <br/>
 <div class="treemonths">
