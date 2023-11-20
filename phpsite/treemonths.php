@@ -109,6 +109,8 @@ $prefix = 'mobile';
              const mnamebg = prefix + "daybg" + (indexbg + i);
              const mnamegr = prefix + "daygr" + (indexgr + i);
 
+             const indexStringParam = "index:" + (indexbg + i);
+
              var bg = document.getElementById(mnamebg);
              var gr = document.getElementById(mnamegr);
 
@@ -117,9 +119,9 @@ $prefix = 'mobile';
                 bg.onblur      = function () { unfocused(mnamebg, mnamegr); }
                 bg.onmouseover = function () {;    mover(mnamebg, mnamegr); }
                 bg.onmouseout  = function () {      mout(mnamebg, mnamegr); }
-                bg.onmousedown = function () {     mdown(mnamebg, mnamegr, "<?php echo $DAYS_BG_URL_PARAMETER ?>", indexbg + i); }
-                bg.onmouseup   = function () {       mup(mnamebg, mnamegr, "<?php echo $DAYS_BG_URL_PARAMETER ?>", indexbg + i); }
-                bg.onkeypress  = function () {    kpress(mnamebg, mnamegr, "<?php echo $DAYS_BG_URL_PARAMETER ?>", indexbg + i); }
+                bg.onmousedown = function () {     mdown(mnamebg, mnamegr, "<?php echo $DAYS_BG_URL_PARAMETER ?>", indexStringParam); }
+                bg.onmouseup   = function () {       mup(mnamebg, mnamegr, "<?php echo $DAYS_BG_URL_PARAMETER ?>", indexStringParam, "<?php echo $lang;?>"); }
+                bg.onkeypress  = function () {    kpress(mnamebg, mnamegr, "<?php echo $DAYS_BG_URL_PARAMETER ?>", indexStringParam); }
                 bg.setAttribute("tabindex", i + 1);
                 bg.tabIndex =               i + 1;
              }
@@ -133,6 +135,8 @@ $prefix = 'mobile';
           for (i = 0; i <= (124); i++) { // 124 is about 4 months 31 days each.
              const mnamebg = prefix + "daybg" + (indexbg + i);
              const mnamegr = prefix + "daygr" + (indexgr + i);
+
+             const indexStringParam = "index:" + (indexgr + i);
 
              var bg = document.getElementById(mnamebg);
              var gr = document.getElementById(mnamegr);
@@ -159,9 +163,9 @@ $prefix = 'mobile';
                 gr.onblur      = function () { unfocused(mnamebg, mnamegr); }
                 gr.onmouseover = function () {     mover(mnamebg, mnamegr); }
                 gr.onmouseout  = function () {      mout(mnamebg, mnamegr); }
-                gr.onmousedown = function () {     mdown(mnamebg, mnamegr, "<?php echo $DAYS_GR_URL_PARAMETER;?>", indexgr + i); }
-                gr.onmouseup   = function () {       mup(mnamebg, mnamegr, "<?php echo $DAYS_GR_URL_PARAMETER;?>", indexgr + i); }
-                gr.onkeypress  = function () {    kpress(mnamebg, mnamegr, "<?php echo $DAYS_GR_URL_PARAMETER;?>", indexgr + i); }
+                gr.onmousedown = function () {     mdown(mnamebg, mnamegr, "<?php echo $DAYS_GR_URL_PARAMETER;?>", indexStringParam); }
+                gr.onmouseup   = function () {       mup(mnamebg, mnamegr, "<?php echo $DAYS_GR_URL_PARAMETER;?>", indexStringParam, "<?php echo $lang;?>"); }
+                gr.onkeypress  = function () {    kpress(mnamebg, mnamegr, "<?php echo $DAYS_GR_URL_PARAMETER;?>", indexStringParam); }
                 gr.setAttribute("tabindex", 124 + i + 1);
                 gr.setAttribute("tabIndex", 124 + i + 1);
                 gr.tabIndex    =            124 + i + 1 ;

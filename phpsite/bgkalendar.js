@@ -150,12 +150,16 @@
      }
 
      function mup(daybg, daygr, param, jepochindex, lang) {
+        var index = (mdownjepochindex != null ? mdownjepochindex : jepochindex);
+        if (index != null && ("" + index).indexOf("index:") === 0) {
+          index = index.substring("index:".length);  // The number of days before calendar begin EPOCH). Could be Bulgarian EPOCH or Gregorian EPOCH depending on param.
+        }
         window.location = window.location.protocol + '//' 
                         + window.location.host 
                         + window.location.port
                         + window.location.pathname 
                         + "?" + (mdownparam != null ? mdownparam : param )
-                        + "=" + (mdownjepochindex != null ? mdownjepochindex : jepochindex)
+                        + "=" + index
 	                + "&lang=" + getLang(lang);
      }
 
