@@ -138,6 +138,7 @@
   <img class="titleimg"  src="images/wikipedia.png"/><br/>
   <?php tr('Прабългарски календар', 'Bulgar calendar', 'Protobulgaren Kalender', 'Булгарский календарь');?>
 </a>
+<a class="cache" href="links/wiki.pdf"></a>
 </div>
 
 <div class="linkitem">
@@ -251,6 +252,7 @@
   <img class="titleimg"  src="links/rusi-ivanov.jpg"/><br/>
   <?php tr('РАЗПРОСТРАНЯВАЙТЕ БЪЛГАРСКИЯ КАЛЕНДАР', 'SPREAD THE BULGARIAN CALENDAR', 'VERBREITEN SIE DEN BULGARISCHEN KALENDER', 'РАСПРОСТРАНЯЙТЕ БОЛГАРСКИЙ КАЛЕНДАРЬ');?>
 </a>
+<a class="cache" href="links/balkan1.pdf"></a>
 </div>
 
 <div class="linkitem">
@@ -258,6 +260,7 @@
   <img class="titleimg"  src="images/twcalendar.png"/><br/>
   <?php tr('Идея за нов календар (английски)', 'Idea for new calendar system (English)', 'Idee für neues Kalendersystem (Englisch)', 'Идея новой системы календаря (английский)');?>
 </a>
+<a class="cache" href="links/world-calender-idea.pdf"></a>
 </div>
 
 <div class="linkitem">
