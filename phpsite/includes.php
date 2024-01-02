@@ -59,60 +59,60 @@ function seqPrefix($number, $genders) {
     if ($bccomp10 >= 0 && $bccomp20  <= 0) {
         switch ($gen) {
           default:
-          case 0: return ''.$number . '-ти';
-          case 1: return ''.$number . '-та';
-          case 2: return ''.$number . '-то';
+          case 0: return ''.$number . '<sup>-ти</sup>';
+          case 1: return ''.$number . '<sup>-та</sup>';
+          case 2: return ''.$number . '<sup>-то</sup>';
         }
     }
     $rem = bcmod($number, '10');
     switch ($rem) {
         case '1': switch ($gen) {
                      default:
-                     case 0: return ''.$number . '-ви';
-                     case 1: return ''.$number . '-ва';
-                     case 2: return ''.$number . '-во';
+                     case 0: return ''.$number . '<sup>-ви</sup>';
+                     case 1: return ''.$number . '<sup>-ва</sup>';
+                     case 2: return ''.$number . '<sup>-во</sup>';
                   }
         case '2': switch ($gen) {
                      default:
-                     case 0: return ''.$number . '-ри';
-                     case 1: return ''.$number . '-ра';
-                     case 2: return ''.$number . '-ро';
+                     case 0: return ''.$number . '<sup>-ри</sup>';
+                     case 1: return ''.$number . '<sup>-ра</sup>';
+                     case 2: return ''.$number . '<sup>-ро</sup>';
                   }
         case '7':
         case '8': switch ($gen) {
                      default:
-                     case 0: return ''.$number . '-ми';
-                     case 1: return ''.$number . '-ма';
-                     case 2: return ''.$number . '-мо';
+                     case 0: return ''.$number . '<sup>-ми</sup>';
+                     case 1: return ''.$number . '<sup>-ма</sup>';
+                     case 2: return ''.$number . '<sup>-мо</sup>';
                   }
         default: switch ($gen) {
                      default:
-                     case 0: return ''. $number . '-ти';
-                     case 1: return ''.$number . '-та';
-                     case 2: return ''.$number . '-то';
+                     case 0: return ''. $number . '<sup>-ти</sup>';
+                     case 1: return ''.$number . '<sup>-та</sup>';
+                     case 2: return ''.$number . '<sup>-то</sup>';
                   }
     }
-    return ''.$number . '-ти';
+    return ''.$number . '<sup>-ти</sup>';
   } else if ($lang == 'en') {
     $bccomp10 = bccomp($number, '10');
     $bccomp20 = bccomp($number, '20');
     if ($bccomp10 >= 0 && $bccomp20  <= 0) {
-      return ''.$number . '-th';
+      return ''.$number . '<sup>-th</sup>';
     }
     $rem = bcmod($number, '10');
     switch ($rem) {
-        case '1': case 0: return ''.$number . '-st';
-        case '2': case 0: return ''.$number . '-nd';
-        case '3': case 0: return ''.$number . '-rd';
-        default:  case 0: return ''.$number . '-th';
+        case '1': case 0: return ''.$number . '<sup>-st</sup>';
+        case '2': case 0: return ''.$number . '<sup>-nd</sup>';
+        case '3': case 0: return ''.$number . '<sup>-rd</sup>';
+        default:  case 0: return ''.$number . '<sup>-th</sup>';
     }
-    return ''.$number . '-th';
+    return ''.$number . '<sup>-th</sup>';
   } else if ($lang == 'de') {
     $bccomp20 = bccomp($number, '20');
     if ($bccomp20  >= 0) {
-      return ''.$number . '-ste';
+      return ''.$number . '<sup>-ste</sup>';
     }
-    return ''.$number . '-te';
+    return ''.$number . '<sup>-te</sup>';
   } else if ($lang == 'ru') {
     $gen = 0;
     if (!isset($genders[3]) || $genders[3] == null || $genders[0] == 'm') {
@@ -127,41 +127,41 @@ function seqPrefix($number, $genders) {
     if ($bccomp10 >= 0 && $bccomp20  <= 0) {
         switch ($gen) {
           default:
-          case 0: return ''.$number . '-ый';
-          case 1: return ''.$number . '-ая';
-          case 2: return ''.$number . '-ое';
+          case 0: return ''.$number . '<sup>-ый</sup>';
+          case 1: return ''.$number . '<sup>-ая</sup>';
+          case 2: return ''.$number . '<sup>-ое</sup>';
         }
     }
     $rem = bcmod($number, '10');
     switch ($rem) {
         case '1': switch ($gen) {
                      default:
-                     case 0: return ''.$number . '-ый';
-                     case 1: return ''.$number . '-ая';
-                     case 2: return ''.$number . '-ое';
+                     case 0: return ''.$number . '<sup>-ый</sup>';
+                     case 1: return ''.$number . '<sup>-ая</sup>';
+                     case 2: return ''.$number . '<sup>-ое</sup>';
                   }
         case '2': switch ($gen) {
                      default:
-                     case 0: return ''.$number . '-ой';
-                     case 1: return ''.$number . '-ая';
-                     case 2: return ''.$number . '-ое';
+                     case 0: return ''.$number . '<sup>-ой</sup>';
+                     case 1: return ''.$number . '<sup>-ая</sup>';
+                     case 2: return ''.$number . '<sup>-ое</sup>';
                   }
         case '6':
         case '7':
         case '8': switch ($gen) {
                      default:
-                     case 0: return ''.$number . '-ой';
-                     case 1: return ''.$number . '-ая';
-                     case 2: return ''.$number . '-ое';
+                     case 0: return ''.$number . '<sup>-ой</sup>';
+                     case 1: return ''.$number . '<sup>-ая</sup>';
+                     case 2: return ''.$number . '<sup>-ое</sup>';
                   }
         default: switch ($gen) {
                      default:
-                     case 0: return ''. $number . '-ый';
-                     case 1: return ''.$number . '-ая';
-                     case 2: return ''.$number . '-ое';
+                     case 0: return ''. $number . '<sup>-ый</sup>';
+                     case 1: return ''.$number . '<sup>-ая</sup>';
+                     case 2: return ''.$number . '<sup>-ое</sup>';
                   }
     }
-    return ''.$number . '-ый';
+    return ''.$number . '<sup>-ый</sup>';
   } 
 }
 
@@ -526,6 +526,7 @@ $yeargrformatted  = formatMinimumDigits($yeargr, 4);
 
 $igr = $periodsgr[2]->startsAtDaysAfterEpoch();
 $ibg = bcadd($igr, bcsub($daysbgFromStartOfCalendarTillJavaEpoch, $daysgrFromStartOfCalendarTillJavaEpoch));
+
 
 $isleapbg = $periodsbg[2]->getStructure()->getTotalLengthInDays() > 365;
 $isleapgr = $periodsgr[2]->getStructure()->getTotalLengthInDays() > 365;

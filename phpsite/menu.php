@@ -121,6 +121,11 @@
       </a>
   </li>
   <li>
+      <a href="<?php echo $DIR_PREFIX;?>tochnost.php?lang=<?php tr('bg', 'en', 'de', 'ru');?>">
+        <?php tr('Точност', 'Accuracy', 'Genauigkeit', 'Точность')?>
+      </a>
+  </li>
+  <li>
       <a href="<?php echo $DIR_PREFIX;?>iztochnici.php?lang=<?php tr('bg', 'en', 'de', 'ru');?>">
         <?php tr('Източници', 'Sources of information', 'Informationsquellen', 'Источники информации')?>
       </a>

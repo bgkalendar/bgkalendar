@@ -149,8 +149,8 @@
   <?php endif ?>
 </div>
 -->
-<div style="border-radius: 1em; border: 1px solid green; background: lightblue; max-width: 80%; min-height: 3em; padding: 1em; text-align: center;">
 <!--
+<div style="border-radius: 1em; border: 1px solid green; background: lightblue; max-width: 80%; min-height: 3em; padding: 1em; text-align: center;">
   <?php if ($lang == 'bg') : ?>
     За да получите своя версия на хартиен календар (еднолистов формат А2) за <b>7528/2023</b> моля свържете се със <u>admin [а] bgkalendar.com</u> или поръчайте <a href="papercalendar/2023?lang=bg">оттук</a>.<br/>
     <a href="papercalendar/2023?lang=bg">Виж повече</a><br/>
@@ -162,7 +162,6 @@
   <?php elseif ($lang == 'ru') : ?>
     Чтобы получить свою печатную версию болгарского календаря (Формат A2) на 7528, свяжитесь с <u>admin [а] bgkalendar.com</u> .
   <?php endif ?>
--->
      <span id="timeNewYear">
        <?php if ($lang == 'bg') : ?>
          Честита Нова Година по Древния Български Календар
@@ -218,9 +217,10 @@
          }
       }
     }
-    calculateTimeTillNewYear(false);
+    //calculateTimeTillNewYear(false);
     </script>
 </div>
+-->
 <br/>
 <br/>
 <div class="treemonths">
@@ -277,7 +277,7 @@
                } else {
                     echo '&nbsp;';
                }
-               $weekdaybg = getBulgarianWeekDay($monthbg+1, $daybg+1);
+               $weekdaybg = getBulgarianWeekDay($monthbg, $daybg);
                if ($weekdaybg != 0) {
                    tr('ден', 'day', 'Tag', 'день'); 
                    echo ' '; 
@@ -1219,7 +1219,7 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
            <td class="details"><?php echo seqPrefix($periodsgr[0]->getNumber() + 1, 'mnmm');?></td>
            <td class="details">
                <?php
-                  $wee = $isbc ? 6 + bcmod($igr+1, 7) : bcmod($igr, 7);
+                  $wee = $isbc ? 6 + bcmod($daysgr+1, 7) : bcmod($daysgr, 7);
                   tr('Ден от седмицата', 'Day of week', 'Wochentag', 'День недели'); 
                   echo ': '; 
                   tr($WEEKDAYS[$wee], $WEEKDAYS_EN[$wee], $WEEKDAYS_DE[$wee], $WEEKDAYS_RU[$wee]);
