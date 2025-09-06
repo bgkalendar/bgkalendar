@@ -1,0 +1,9 @@
+services:
+  bgkalendar:
+    image: bgkalendar/bgkalendar
+    ports:
+      - "${PORT_NUMBER:-8387}:80"
+    stdin_open: true
+    tty: true
+    privileged: true
+    restart: always
