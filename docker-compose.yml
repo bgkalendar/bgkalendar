@@ -1,6 +1,13 @@
 services:
   bgkalendar:
-    image: bgkalendar/bgkalendar
+    image: bgkalendar/bgkalendar:latest
+    container_name: bgkalendar
+    build:
+      context: .
+      dockerfile: ${DOCKERFILE:-Dockerfile}
+      args:
+        TARGETPLATFORM: ${PLATFORM:-linux/amd64}
+    platform: ${PLATFORM:-linux/amd64}
     ports:
       - "${PORT_NUMBER:-8387}:80"
     stdin_open: true
