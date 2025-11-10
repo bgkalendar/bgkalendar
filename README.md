@@ -23,6 +23,7 @@ Welcome to the Bulgarian Calendar Project
     + [Star year](#star-year)
     + [Period of 4 star years](#period-of-4-star-years)
     + [Star Epoch](#star-epoch)
+- [Docker Build](#docker-build)
 - [License](#license)
 
 <!-- tocstop -->
@@ -669,6 +670,37 @@ Each star epoch consists of 10 080 000 (ten million and eighty thousand) Earth y
 461 462 463 464  465 466 467 468  469 470 471 472  473 474 475 476  477 478 479 480  481 482 483 484  485 486 487 488  489 490 491 492  493 494 495 496 497 498 499 500
 
 ````
+
+# Docker Build
+This script builds and runs the project using **Docker Compose**, automatically selecting the correct Dockerfile for your system architecture (`x86_64` or `arm64`).
+
+## Usage
+
+```bash
+./docker-build-publish.sh [options]
+```
+
+### Options
+
+| Option            | Description                                                      |
+| ----------------- | ---------------------------------------------------------------- |
+| `-p, --publish`   | Tag & push the image (`:latest` and `:YYYY-MM-DD`) to Docker Hub |
+| `-P, --port PORT` | Map host port to container port 80 (default: 80)                 |
+| `-h, --help`      | Show usage information                                           |
+
+## Behavior
+
+* Always builds and starts via **Docker Compose**.
+* Automatically uses the right Dockerfile based on system architecture.
+* With `-p`, pushes both `:latest` and date-based tags to Docker Hub.
+
+## Examples
+
+```bash
+./docker-build-publish.sh
+./docker-build-publish.sh -P 8089
+./docker-build-publish.sh -p
+```
 
 License
 =======
