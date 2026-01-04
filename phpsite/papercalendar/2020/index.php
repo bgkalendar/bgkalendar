@@ -44,7 +44,7 @@ Vorschau
 </center>
 <div style="margin: 2em; align: auto;">
   <?php if ($lang == 'bg') : ?>
-    Свали като <a href="kalendar-2020-bg.svg">SVG (Оригинал)</a>, 
+    Свали като <a href="kalendar-2020-bg.svg.php">SVG (Оригинал)</a>, 
     <a href="kalendar-2020-bg.png">PNG</a> или 
     <a href="kalendar-2020-bg.pdf">PDF</a>.
     <br/><br/>

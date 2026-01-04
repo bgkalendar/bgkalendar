@@ -72,7 +72,7 @@ Vorschau
 </center>
 <div style="margin: 2em; align: auto;">
   <?php if ($lang == 'bg') : ?>
-    Свали като <a href="bgkalendar-2023-bg-mb.svg">SVG (Оригинал)</a>, 
+    Свали като <a href="bgkalendar-2023-bg-mb.svg.php">SVG (Оригинал)</a>, 
     <a href="bgkalendar-2023-bg-mb.png">PNG</a> или 
     <a href="bgkalendar-2023-bg-mb.pdf">PDF</a>.
     <br/><br/>
