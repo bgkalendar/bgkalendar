@@ -1,4 +1,4 @@
-<?php require_once('includes.php'); $lang = $GLOBALS['lang']; ?><!DOCTYPE html>
+<?php require_once('cache.php'); ?><?php require_once('includes.php'); $lang = $GLOBALS['lang']; ?><!DOCTYPE html>
 <html>
 <head>
    <meta charset="utf-8">
