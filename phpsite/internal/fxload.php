@@ -7,19 +7,16 @@ getenv('HTTP_FORWARDED_FOR')?:
 getenv('HTTP_FORWARDED')?:
 getenv('REMOTE_ADDR');
 $json_encode_props = JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PARTIAL_OUTPUT_ON_ERROR;
-if ($ip != 'localhost' && $ip != '127.0.0.1') {
-  http_response_code(404);
-  error_log('Trying to access '.__FILE__.' from IP '.$ip.'. That is not allowed. Only calls from localhost or 127.0.0.1 are allowed.');
-  exit(1);
-}
 $access_key = '';
+$fxloadallowedip = '';
 if (! file_exists(__DIR__ . '/fxloadcredentials.php')) {
   http_response_code(500);
   header('X-Error: File '.__DIR__ . '/fxloadcredentials.php'." does not exist. Please create one and set \$access_key='your access key here'.");
   $obj = array('status'=>'error',
+	       'ip' => $ip,
                'error'=>'File '.__DIR__ . '/fxloadcredentials.php'." does not exist. Please create one and set \$access_key='your access key here'",
                'site'=>'https://currencylayer.com/documentation', 
-               'apiurl'=>'http://apilayer.net/api/'.$endpoint.'?access_key='.$access_key.'&currencies=BGN,BTC,GBP,EUR,CAD');
+               'apiurl'=>'http://apilayer.net/api/'.$endpoint.'?access_key='.$access_key.'&currencies=BTC,GBP,EUR,CAD');
   echo "\n";
   echo json_encode($obj,$json_encode_props);
   echo "\n";
@@ -30,14 +27,33 @@ if ($access_key == '') {
   http_response_code(500);
   header('X-Error: File '.__DIR__ . '/fxloadcredentials.php'." does not define \$access_key='your access key here'.");
   $obj = array('status'=>'error',
+	       'ip' => $ip,
                'error'=>'File '.__DIR__ . '/fxloadcredentials.php'." does not define \$access_key='your access key here'",
                'site'=>'https://currencylayer.com/documentation', 
-               'apiurl'=>'http://apilayer.net/api/'.$endpoint.'?access_key='.$access_key.'&currencies=BGN,BTC,GBP,EUR,CAD');
+               'apiurl'=>'http://apilayer.net/api/'.$endpoint.'?access_key='.$access_key.'&currencies=BTC,GBP,EUR,CAD');
   echo "\n";
   echo json_encode($obj,$json_encode_props);
   echo "\n";
   exit(1);
 } 
+if ($fxloadallowedip == '') {
+  http_response_code(500);
+  header('X-Error: File '.__DIR__ . '/fxloadcredentials.php'." does not define \$fxloadallowedip='Allowed Soource IP'.");
+  $obj = array('status'=>'error',
+	       'ip' => $ip,
+               'error'=>'File '.__DIR__ . '/fxloadcredentials.php'." does not define \$fxloadallowedip='Allowed Source IP'",
+               'site'=>'https://currencylayer.com/documentation', 
+               'apiurl'=>'http://apilayer.net/api/'.$endpoint.'?access_key='.$access_key.'&currencies=BTC,GBP,EUR,CAD');
+  echo "\n";
+  echo json_encode($obj,$json_encode_props);
+  echo "\n";
+  exit(1);
+} 
+if ($ip != 'localhost' && $ip != '127.0.0.1' && $ip != $fxloadallowedip) {
+  http_response_code(404);
+  error_log('Trying to access '.__FILE__.' from IP '.$ip.'. That is not allowed. Only calls from localhost or 127.0.0.1 or '.$fxloadallowedip . ' are allowed.');
+  exit(1);
+}
 
 $etag = '';
 $date = '';
@@ -61,7 +77,7 @@ $endpoint = 'live';
 $headers = [];
 
 // Initialize CURL:
-$ch = curl_init('http://apilayer.net/api/'.$endpoint.'?access_key='.$access_key.'&currencies=BGN,BTC,GBP,EUR,CAD,RUB');
+$ch = curl_init('http://apilayer.net/api/'.$endpoint.'?access_key='.$access_key.'&currencies=BTC,GBP,EUR,CAD,RUB');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_HEADERFUNCTION, "HandleHeaderLine");
 // this function is called by curl for each header received
@@ -126,9 +142,10 @@ if ( ! $exchangeRates['success']) {
   header('X-Error: Error obtaining rates from provider: https://currencylayer.com/documentation');
   echo "\n";
   $obj = array('status'=>'error',
+	       'ip' => '"' . $ip  .'"',
                'error'=>'Error obtaining rates from provider',
                'site'=>'https://currencylayer.com/documentation', 
-               'apiurl'=>'http://apilayer.net/api/'.$endpoint.'?access_key='.$access_key.'&currencies=BGN,BTC,GBP,EUR,CAD',
+               'apiurl'=>'http://apilayer.net/api/'.$endpoint.'?access_key='.$access_key.'&currencies=BTC,GBP,EUR,CAD',
                'response'=>$exchangeRates);
   echo "\n";
   echo json_encode($obj, $json_encode_props);
@@ -137,11 +154,11 @@ if ( ! $exchangeRates['success']) {
 }
 // Access the exchange rate values, e.g. GBP:
 $usdbtc = $exchangeRates['quotes']['USDBTC'];
-$usdbgn = $exchangeRates['quotes']['USDBGN'];
 $usdgbp = $exchangeRates['quotes']['USDGBP'];
 $usdeur = $exchangeRates['quotes']['USDEUR'];
 $usdcad = $exchangeRates['quotes']['USDCAD'];
 $usdrub = $exchangeRates['quotes']['USDRUB'];
+$usdbgn = $usdeur * 1.95583;
 
 $btcusd = 1.0 / $usdbtc;
 $btcbgn = $btcusd * $usdbgn;
@@ -177,8 +194,9 @@ unlink(__DIR__.'/fxrates-'.$rates.'.php');
 
 http_response_code(200);
 $obj = array('status'=>'success',
+      'ip' => '"'.$ip .'"',
       'site'=>'https://currencylayer.com/documentation', 
-      'apiurl'=>'http://apilayer.net/api/'.$endpoint.'?access_key='.$access_key.'&currencies=BGN,BTC,GBP,EUR,CAD',
+      'apiurl'=>'http://apilayer.net/api/'.$endpoint.'?access_key='.$access_key.'&currencies=BTC,GBP,EUR,CAD',
       'response'=>$exchangeRates,
       'calculatedrates'=>array(
                'BTC-USD'=> $btcusd,
