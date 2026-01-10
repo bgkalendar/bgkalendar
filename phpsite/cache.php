@@ -13,6 +13,10 @@ $base = dirname(__FILE__);
 $cachedfile = "";
 $query = "";
 try {
+#  if ($dg != null || $db != null) {
+#    echo "Searching by date temporarily does not work.\nТърсенето по определена дата онлайн временно не работи.\nМоля използвайте кода от https://github.com/bgkalendar/bgkalendar или https://hub.docker.com/r/bgkalendar/bgkalendar";
+#    exit (0);
+#  } 
   if ($db == null && $dg == null && $cb == null && $cg == null) {
     $cachefile = "$base/cache/$year-$month-$day.$lang.html";
     $query = "/?cg=$day-$month-$year&lang=$lang";
@@ -31,14 +35,14 @@ try {
     $query = $query . "lang=$lang";
   }
   if (file_exists($cachefile)) {
-    echo ("File \"$cachefile\" exists.<br/>\n");
+#echo ("Cacheexists.<br/>\n");
     $bytes = readfile($cachefile);
     exit (0) ; 
   } else {
     $url = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? "https://" : "http://")
      . $_SERVER['HTTP_HOST']
      . rtrim(dirname($_SERVER['REQUEST_URI']), '/\\') . '/';
-    echo ("File \"$cachefile\" does not exists in \"$url\".");
+#    echo ("File \"$cachefile\" does not exists in \"$url\".");
     $arrContextOptions=array(
       "ssl"=>array(
           "verify_peer"=>false,
