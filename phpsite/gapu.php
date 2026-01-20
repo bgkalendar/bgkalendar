@@ -51,36 +51,49 @@ if (file_exists(__DIR__.'/internal/fxrates-a.php')) {
      var date = '<?php echo $date == ''?'null':$date;?>';
      var btcusd = <?php echo $btcusd == ''?'null':$btcusd;?>;
      var btcbgn = <?php echo $btcbgn == ''?'null':$btcbgn;?>;
+     var btceur = <?php echo $btceur == ''?'null':$btceur;?>;
      var btcgbp = <?php echo $btcgbp == ''?'null':$btcgbp;?>;
      var btccad = <?php echo $btccad == ''?'null':$btccad;?>;
      var btcrub = <?php echo $btcrub == ''?'null':$btcrub;?>;
      function  convert(amount, from) {
         var ibtc = document.getElementById('btc');
         var ibgn = document.getElementById('bgn');
+        var ieur = document.getElementById('eur');
         var iusd = document.getElementById('usd');
         var icad = document.getElementById('cad');
         var igbp = document.getElementById('gbp');
         var irub = document.getElementById('rub');
         if (from == 'BTC') {
           ibgn.value = amount * btcbgn;
+          ieur.value = amount * btceur;
           iusd.value = amount * btcusd;
           icad.value = amount * btccad;
           igbp.value = amount * btcgbp;
           irub.value = amount * btcrub;
         } else if (from == 'BGN') {
           ibtc.value = (amount / btcbgn);
+          ieur.value = (amount / btcbgn)*btceur;
           iusd.value = (amount / btcbgn)*btcusd;
           icad.value = (amount / btcbgn)*btccad;
           igbp.value = (amount / btcbgn)*btcgbp;
           irub.value = (amount / btcbgn)*btcrub;
+        } else if (from == 'EUR') {
+          ibtc.value = (amount / btceur);
+          ibgn.value = (amount / btceur)*btcbgn;
+          iusd.value = (amount / btceur)*btcusd;
+          icad.value = (amount / btceur)*btccad;
+          igbp.value = (amount / btceur)*btcgbp;
+          irub.value = (amount / btceur)*btcrub;
         } else if (from == 'USD') {
           ibtc.value = (amount / btcusd);
+          ieur.value = (amount / btcusd)*btceur;
           ibgn.value = (amount / btcusd)*btcbgn;
           icad.value = (amount / btcusd)*btccad;
           igbp.value = (amount / btcusd)*btcgbp;
           irub.value = (amount / btcusd)*btcrub;
         } else if (from == 'CAD') {
           ibtc.value = (amount / btccad);
+          ieur.value = (amount / btccad)*btceur;
           ibgn.value = (amount / btccad)*btcbgn;
           iusd.value = (amount / btccad)*btcusd;
           igbp.value = (amount / btccad)*btcgbp;
@@ -88,18 +101,21 @@ if (file_exists(__DIR__.'/internal/fxrates-a.php')) {
         } else if (from == 'GBP') {
           ibtc.value = (amount / btcgbp);
           ibgn.value = (amount / btcgbp)*btcbgn;
+          ieur.value = (amount / btcgbp)*btceur;
           iusd.value = (amount / btcgbp)*btcusd;
           icad.value = (amount / btcgbp)*btccad;
           irub.value = (amount / btcgbp)*btcrub;
         } else if (from == 'RUB') {
           ibtc.value = (amount / btcrub);
           ibgn.value = (amount / btcrub)*btcbgn;
+          ieur.value = (amount / btcrub)*btceur;
           iusd.value = (amount / btcrub)*btcusd;
           icad.value = (amount / btcrub)*btccad;
           igbp.value = (amount / btcrub)*btcgbp;
         }    
         if (isNaN(ibtc.value)&&from!='BTC') {ibtc.value = '';} 
         if (isNaN(ibgn.value)&&from!='BGN') {ibgn.value = '';} 
+        if (isNaN(ieur.value)&&from!='EUR') {ieur.value = '';} 
         if (isNaN(iusd.value)&&from!='USD') {iusd.value = '';} 
         if (isNaN(icad.value)&&from!='CAD') {icad.value = '';} 
         if (isNaN(igbp.value)&&from!='GBP') {igbp.value = '';} 
@@ -166,9 +182,15 @@ if (file_exists(__DIR__.'/internal/fxrates-a.php')) {
   <br/><br/>
   <br/><br/>
   <table>
+  <!--
   <tr><td>1 <?php tr('биткойн', 'bitcoin', 'bitcoin', 'биткойн');?> (BTC) = </td>
   <td class="btc"><?php echo $btcbgn==''?'<font color="red">неизвестно колко</font> ':$btcbgn;?></td>
   <td align="right"> <?php tr('български лева', 'Bulgarian Levs', 'Bulgarische Lev', 'Болгарские Лева');?></td><td> (BGN)</td></tr>
+  -->
+
+  <tr><td>1 <?php tr('биткойн', 'bitcoin', 'bitcoin', 'биткойн');?> (BTC) = </td>
+  <td class="btc"><?php echo $btcbgn==''?'<font color="red">неизвестно колко</font> ':$btceur;?></td>
+  <td align="right"> <?php tr('евра', 'Euro', 'Euro', 'Евро');?></td><td> (EUR)</td></tr>
 
   <tr><td>1 <?php tr('биткойн', 'bitcoin', 'bitcoin', 'биткойн');?> (BTC) = </td>
   <td class="btc"><?php echo $btcusd==''?'<font color="red">неизвестно колко</font> ':$btcusd;?></td>
@@ -193,47 +215,56 @@ if (file_exists(__DIR__.'/internal/fxrates-a.php')) {
        type="text" 
        name="btc" 
        id="btc" 
-       value="<?php echo 10/$btcbgn;?>" 
+       value="<?php echo 5/$btceur;?>" 
        onchange="javascript:convert(this.value, 'BTC');"
        onkeyup="javascript:convert(this.value, 'BTC')"
-  /> BTC = 
+  /> BTC ~ 
   <input class="btc" 
        type="text" 
        name="bgn" 
        id="bgn" 
-       value="<?php echo 10;?>" 
+       hidden="hidden"
+       value="<?php echo (5/$btceur)*$btcbgn;?>" 
        onchange="javascript:convert(this.value, 'BGN');"
        onkeyup="javascript:convert(this.value, 'BGN')"
-  /> BGN = 
+  /><!-- BGN ~ -->
+  <input class="btc" 
+       type="text" 
+       name="eur" 
+       id="eur" 
+       value="<?php echo (5/$btceur)*$btceur;?>" 
+       onchange="javascript:convert(this.value, 'EUR');"
+       onkeyup="javascript:convert(this.value, 'EUR')"
+  /> EUR ~ 
   <input class="btc" 
        type="text" 
        name="usd" 
        id="usd" 
-       value="<?php echo (10/$btcbgn)*$btcusd;?>" 
+       value="<?php echo (5/$btceur)*$btcusd;?>" 
        onchange="javascript:convert(this.value, 'USD');"
        onkeyup="javascript:convert(this.value, 'USD')"
-  /> USD = 
+  /> USD ~ 
   <input class="btc" 
        type="text" 
        name="cad" 
        id="cad" 
-       value="<?php echo (10/$btcbgn)*$btccad;?>" 
+       value="<?php echo (5/$btceur)*$btccad;?>" 
        onchange="javascript:convert(this.value, 'CAD');"
        onkeyup="javascript:convert(this.value, 'CAD')"
-  /> CAD = 
+  /> CAD ~ 
   <input class="btc" 
        type="text" 
        name="gbp" 
        id="gbp" 
-       value="<?php echo (10/$btcbgn)*$btcgbp;?>" 
+       value="<?php echo (5/$btceur)*$btcgbp;?>" 
        onchange="javascript:convert(this.value, 'GBP');"
        onkeyup="javascript:convert(this.value, 'GBP')"
-  /> GBP = 
+  /> GBP ~ 
   <input class="btc" 
        type="text" 
        name="rub" 
        id="rub" 
-       value="<?php echo (10/$btcbgn)*$btcrub;?>" 
+       value="<?php echo (5/$btceur)*$btcrub;?>" 
        onchange="javascript:convert(this.value, 'RUB');"
        onkeyup="javascript:convert(this.value, 'RUB')"
   /> RUB 
