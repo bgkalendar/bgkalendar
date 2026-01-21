@@ -315,7 +315,7 @@
                 <?php 
                 echo seqPrefix($periodsbg[2]->getNumber()+1, 'fnnm'); 
                 tr(' от началото на Четиригодие', 
-                   ' from the beginning of four year period', 
+                   " This is iproved text . Yordan's change from the beginning of four year period", 
                    ' von dem Anfang als vier Jahre lange Abschnitt', 
                    ' с начала четырёхлетнего периода');
                 ?>
@@ -1473,6 +1473,7 @@ $wday = bcmod($igr, 7);
    и сравнението му със съвременния григориански календар.
    <br/><br/>Сайтът "Българският Календар", подкрепя инициативата «За Българска Кирилица». За повече подробности, вижте <a href="kupu%D0%BBu%D1%86a-bg.php">тук</a>.
 <?php elseif ($lang == 'en') : ?>
+   This needs some improvement
    Ancient Bulgarians, who lived on Bulgarian land, created their own callendar system. The Bulgarian Callendar has been 
    reconstrucuted basedon on writen historical artefacts (<a href="iztochnici.php?lang=en">Namelist of Bulgarian Rulers</a>), 
    Bulgarian national folklore and legends. Undisputed success is the official recognition from UNESCO in 1976, that this is 
