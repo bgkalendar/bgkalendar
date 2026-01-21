@@ -1,0 +1,40 @@
+# syntax=docker/dockerfile:1.6
+# ARM64 build (PHP 7 + Apache на Alpine 3.14)
+FROM --platform=$TARGETPLATFORM alpine:3.14
+
+LABEL org.opencontainers.image.title="bgcalendar-apache-php7-arm64" \
+      org.opencontainers.image.description="Apache + PHP 7 + JRE 11 (ARM64)" \
+      maintainer="You <admin@bgkalendar.com>"
+
+# Alpine 3.14 repositories (where php7- packages are available)
+RUN printf '%s\n' \
+    "https://dl-cdn.alpinelinux.org/alpine/v3.14/main" \
+    "https://dl-cdn.alpinelinux.org/alpine/v3.14/community" \
+    > /etc/apk/repositories && \
+    apk add --no-cache \
+      apache2 openrc tzdata busybox-extras bash vim ca-certificates \
+      php7 php7-apache2 php7-opcache php7-session php7-mbstring php7-json php7-xml \
+      php7-curl php7-openssl php7-pdo php7-pdo_mysql php7-mysqli php7-zip php7-phar php7-dom \
+      php7-bcmath \
+      openjdk11-jre-headless
+
+ENV APACHE_SERVER_NAME=bgkalendar.com
+ENV JAVA_HOME=/usr/lib/jvm/java-11-openjdk
+ENV DOCROOT=/app/public
+
+RUN mkdir -p "$DOCROOT" /var/log/apache2 /run/apache2 && \
+    mkdir -p /etc/apache2 && ln -s /usr/lib/apache2 /etc/apache2/modules || true
+
+COPY arm64/bootstrap.start.sh /bootstrap/start.sh
+COPY arm64/httpd.conf /etc/apache2/httpd.conf
+
+RUN chmod +x /bootstrap/start.sh
+
+ADD phpsite/ /app/public
+ADD java/    /app/public/java
+WORKDIR /app/public/java
+RUN echo "Wallet Address May Be Specified In /app/public/bitcoinwallet.php" > /app/public/bitcoinwallet.php && \
+    chown -R apache:apache /app
+
+EXPOSE 80
+ENTRYPOINT ["/bootstrap/start.sh"]
