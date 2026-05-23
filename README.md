@@ -23,6 +23,7 @@ Welcome to the Bulgarian Calendar Project
     + [Star year](#star-year)
     + [Period of 4 star years](#period-of-4-star-years)
     + [Star Epoch](#star-epoch)
+- [Docker Build](#docker-build)
 - [License](#license)
 
 <!-- tocstop -->
@@ -669,6 +670,93 @@ Each star epoch consists of 10 080 000 (ten million and eighty thousand) Earth y
 461 462 463 464  465 466 467 468  469 470 471 472  473 474 475 476  477 478 479 480  481 482 483 484  485 486 487 488  489 490 491 492  493 494 495 496 497 498 499 500
 
 ````
+
+# Docker Build
+This script builds and runs the project using **Docker Compose**, automatically selecting the correct Dockerfile for your system architecture (`x86_64` or `arm64`).
+
+Current container baseline is **PHP 8.5**.
+
+## Build Targets (Fast vs Full)
+
+The Dockerfiles expose two runtime targets:
+
+- `runtime_no_javadoc` (default): faster build, skips JavaDoc generation
+- `runtime_with_javadoc`: full build, includes generated JavaDoc under `/javadoc`
+
+### Fast PHP-first build (recommended on slow servers)
+
+```bash
+./forge.sh --build --up
+```
+
+### Full build later with JavaDoc
+
+```bash
+./forge.sh --build --with-javadoc --up
+```
+
+You can also select the target directly with Compose:
+
+```bash
+BUILD_TARGET=runtime_no_javadoc docker compose build
+BUILD_TARGET=runtime_with_javadoc docker compose build
+```
+
+## forge.sh Usage
+
+```bash
+./forge.sh [options]
+```
+
+### Options
+
+| Option                 | Description |
+| ---------------------- | ----------- |
+| `-h`, `--help`         | Print help |
+| `-r`, `--recreate`     | Recreate containers (`down` + `build` + `up`) |
+| `-b`, `--build`        | Build image |
+| `-n`, `--build-no-cache` | Build image without cache |
+| `-J`, `--with-javadoc` | Build `runtime_with_javadoc` target |
+| `-d`, `--down`         | Stop/remove containers |
+| `-u`, `--up`           | Start containers |
+| `-t`, `--test`         | Run runtime + API/page tests |
+
+### Examples
+
+```bash
+./forge.sh --build --up
+./forge.sh --build --with-javadoc --up
+./forge.sh --recreate
+./forge.sh --test
+```
+
+## docker-build-publish.sh Usage
+
+```bash
+./docker-build-publish.sh [options]
+```
+
+### Options
+
+| Option            | Description                                                      |
+| ----------------- | ---------------------------------------------------------------- |
+| `-p, --publish`   | Tag & push the image (`:latest` and `:YYYY-MM-DD`) to Docker Hub |
+| `-P, --port PORT` | Map host port to container port 80 (default: 80)                 |
+| `-h, --help`      | Show usage information                                           |
+
+## Behavior
+
+* Always builds and starts via **Docker Compose**.
+* Automatically uses the right Dockerfile based on system architecture.
+* With `-p`, pushes both `:latest` and date-based tags to Docker Hub.
+
+## Examples
+
+```bash
+./docker-build-publish.sh
+./docker-build-publish.sh -P 8089
+./docker-build-publish.sh -p
+```
 
 License
 =======

@@ -1,0 +1,54 @@
+# syntax=docker/dockerfile:1.6
+# ARM64 build (PHP 8.5 + Apache on Alpine edge)
+FROM --platform=$TARGETPLATFORM eclipse-temurin:21-jdk AS javadoc_builder
+
+WORKDIR /build/java
+COPY java/ /build/java
+RUN chmod +x ./gradlew && \
+    ./gradlew --no-daemon javadoc && \
+    mkdir -p /build/java/build/docs/javadoc/resources/fonts && \
+    printf "/* Fallback font stylesheet for generated Javadoc */\nbody { font-family: Arial, Helvetica, sans-serif; }\n" > /build/java/build/docs/javadoc/resources/fonts/dejavu.css && \
+    printf '<!doctype html><html><head><meta http-equiv="refresh" content="0; url=allclasses-index.html"><title>Redirect</title></head><body><a href="allclasses-index.html">allclasses-index.html</a></body></html>\n' > /build/java/build/docs/javadoc/allclasses-frame.html
+
+FROM --platform=$TARGETPLATFORM alpine:edge AS runtime_base
+
+LABEL org.opencontainers.image.title="bgcalendar-apache-php85-arm64" \
+      org.opencontainers.image.description="Apache + PHP 8.5 + Java 21 JavaDoc build (ARM64)" \
+      maintainer="You <admin@bgkalendar.com>"
+
+# Alpine edge repositories
+RUN printf '%s\n' \
+    "https://dl-cdn.alpinelinux.org/alpine/edge/main" \
+    "https://dl-cdn.alpinelinux.org/alpine/edge/community" \
+    > /etc/apk/repositories && \
+    apk add --no-cache \
+      apache2 openrc tzdata busybox-extras bash vim ca-certificates \
+      php85 php85-apache2 php85-session php85-mbstring php85-common php85-xml \
+      php85-curl php85-openssl php85-pdo php85-pdo_mysql php85-mysqli php85-zip php85-phar php85-dom \
+      php85-bcmath && \
+    ln -sf /usr/bin/php85 /usr/bin/php
+
+ENV APACHE_SERVER_NAME=localhost
+ENV DOCROOT=/app/public
+
+RUN mkdir -p "$DOCROOT" /var/log/apache2 /run/apache2 && \
+    mkdir -p /etc/apache2 && ln -s /usr/lib/apache2 /etc/apache2/modules || true
+
+COPY arm64/bootstrap.start.sh /bootstrap/start.sh
+COPY arm64/httpd.conf /etc/apache2/httpd.conf
+
+RUN chmod +x /bootstrap/start.sh
+
+COPY --chown=apache:apache phpsite/ /app/public
+COPY --chown=apache:apache java/ /app/public/java
+WORKDIR /app/public/java
+RUN chmod +x /app/public/java/gradlew && \
+    echo "Wallet Address May Be Specified In /app/public/bitcoinwallet.php" > /app/public/bitcoinwallet.php
+
+EXPOSE 80
+ENTRYPOINT ["/bootstrap/start.sh"]
+
+FROM runtime_base AS runtime_no_javadoc
+
+FROM runtime_base AS runtime_with_javadoc
+COPY --from=javadoc_builder /build/java/build/docs/javadoc /app/public/javadoc

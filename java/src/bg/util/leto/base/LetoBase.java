@@ -125,8 +125,8 @@ public abstract class LetoBase implements Leto {
         periodsStructures = new HashMap<LetoPeriodType, LetoPeriodStructure>(types.length);
         
         for (int i =0; i < types.length; i++) {
-            periods.put(types[i], new Long(0));           periodAbsoluteCounts.put(types[i], new Long(0));
-            periodsStartDay.put(types[i], new Long(0));   
+            periods.put(types[i], Long.valueOf(0));           periodAbsoluteCounts.put(types[i], Long.valueOf(0));
+            periodsStartDay.put(types[i], Long.valueOf(0));   
         }
         
         LetoPeriodType currentType = types[types.length - 1];
@@ -327,9 +327,9 @@ public abstract class LetoBase implements Leto {
     private void increaseCount(Map<LetoPeriodType, Long> periods, LetoPeriodStructure structure, long value) {
         Long periodCount = periods.get(structure.getPeriodType());
         if (periodCount == null) {
-            periodCount = new Long(value);
+            periodCount = Long.valueOf(value);
         } else {
-            periodCount = new Long(periodCount.longValue() + value);
+            periodCount = Long.valueOf(periodCount.longValue() + value);
         }
         periods.put(structure.getPeriodType(), periodCount);
     }
@@ -343,9 +343,9 @@ public abstract class LetoBase implements Leto {
             long totalCount = structure.getTotalLengthInPeriodTypes(type);
             Long sumLong = periodAbsoluteCounts.get(type);
             if (sumLong == null) {
-                sumLong = new Long(totalCount * value);
+                sumLong = Long.valueOf(totalCount * value);
             } else {
-                sumLong = new Long(sumLong.longValue() + (totalCount * value) );
+                sumLong = Long.valueOf(sumLong.longValue() + (totalCount * value) );
             }
             periodAbsoluteCounts.put(type, sumLong);
         }
@@ -411,7 +411,7 @@ public abstract class LetoBase implements Leto {
                 handleNameDescriptionAndTramslations(possibleStructureResource, possibleStructure.getName(), null, possibleStructure.getNameTranslations(), null);
                 
                 long days = possibleStructure.getTotalLengthInDays();
-                possibleStructureResource.put("length-days", new Long(days));
+                possibleStructureResource.put("length-days", Long.valueOf(days));
                 
                 Map<String, Long> length = new LinkedHashMap<String, Long>();
                 possibleStructureResource.put("length", length);
@@ -420,7 +420,7 @@ public abstract class LetoBase implements Leto {
                     String lengthTypeName = type.getName();
                     long lengthInPeriodType = possibleStructure.getTotalLengthInPeriodTypes(type);
                     if (lengthInPeriodType > 0) {
-                        length.put(lengthTypeName, new Long(lengthInPeriodType));
+                        length.put(lengthTypeName, Long.valueOf(lengthInPeriodType));
                     }
                 }
                 

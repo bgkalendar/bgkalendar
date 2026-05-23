@@ -27,7 +27,7 @@ function get() {
     
   global $json_encode_props, $YEAR_ANIMALS_EN, $lang;
   header('Content-Type: application/json');
-  handle_version(basename(dirname(dirname(dirname(__DIR__)))));
+  handle_version(api_version_from_dir(__DIR__));
 
   $proto = "http".((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off'    )?'s':'' );
   $path = $_SERVER['REQUEST_URI'];
@@ -45,16 +45,22 @@ function get() {
   for ($i = 0; $i < count($periods); $i++) {
     $period    = $periods[$i];
     $structures = $period->getPossibleStructures();
+    if ($structures == null) {
+      $structures = array();
+    }
     $structuresJson = null;
     $structuresJson = array();
     for($j = 0; $j < count($structures); $j++) {
       $structure = $structures[$j];
       $subs      = $structure->getSubPeriods();
+      if ($subs == null) {
+        $subs = array();
+      }
       $subsJson = array();
       for ($k = 0; $k < count($subs); $k++) {
         $sub = $subs[$k];
 	$totalLengthInDays = $sub->getTotalLengthInDays();
-	if ($_GET['simplified']) {
+		if (!empty($_GET['simplified'])) {
 	  $subJson = $sub->getName($lang);
 	} else {	
 	  $subJson = array(
@@ -126,8 +132,8 @@ if ($method == "GET") {
 } else if ($method == "DELETE") {
   delete();
 } else {
-  $method = $method.replace("\\", "\\\\");
-  $method = $method.replace("'", "\\'");
+  $method = str_replace("\\", "\\\\", $method);
+  $method = str_replace("'", "\\'", $method);
   http_exit(405, "Method '" . $method . "' not allowed. Allowed methods are 'GET', 'POST', 'PUT' and 'DELETE'.");
 }   
 ?>

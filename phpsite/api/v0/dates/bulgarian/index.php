@@ -27,7 +27,7 @@ function get() {
     
   global $json_encode_props, $YEAR_ANIMALS_EN;
   header('Content-Type: application/json');
-  handle_version(basename(dirname(dirname(__DIR__))));
+  handle_version(api_version_from_dir(__DIR__));
 
   $proto = "http".((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off'    )?'s':'' );
   $path = $_SERVER['REQUEST_URI'];
@@ -61,7 +61,7 @@ function get() {
   $year  = $calendarPeriods[2]->getAbsoluteNumber() + 1; // It is actually a 0-based index. So increment by 1.
   $month = $calendarPeriods[1]->getNumber()         + 1; // It is actually a 0-based index. So increment by 1. 
   $day   = $calendarPeriods[0]->getNumber()         + 1; // It is actually a 0-based index. So increment by 1.
-  $shortDate = $year . '-' . $month . '-' . $day;
+  $shortDate = api_format_date($year, $month, $day);
 
   $monthName = $calendarPeriods[1]->getActualName();
   $longDate = $day . ' ' . $monthName . ' ' . $year; 
@@ -79,7 +79,7 @@ function get() {
   $gregorianYear      = $gregorianPeriods[2]->getAbsoluteNumber() + 1; // It is actually a 0-based index. So increment by 1.
   $gregorianMonth     = $gregorianPeriods[1]->getNumber()         + 1; // It is actually a 0-based index. So increment by 1. 
   $gregorianDay       = $gregorianPeriods[0]->getNumber()         + 1; // It is actually a 0-based index. So increment by 1.
-  $gregorianShortDate = $gregorianYear . '-' . $gregorianMonth . '-' . $gregorianDay;
+  $gregorianShortDate = api_format_date($gregorianYear, $gregorianMonth, $gregorianDay);
 
   $gregorianMonthName = $gregorianPeriods[1]->getActualName();
   $gregorianLongDate = $gregorianDay . ' ' . $gregorianMonthName . ' '  . $gregorianYear; 
@@ -160,8 +160,8 @@ if ($method == "GET") {
 } else if ($method == "DELETE") {
   delete();
 } else {
-  $method = $method.replace("\\", "\\\\");
-  $method = $method.replace("'", "\\'");
+  $method = str_replace("\\", "\\\\", $method);
+  $method = str_replace("'", "\\'", $method);
   http_exit(405, "Method '" . $method . "' not allowed. Allowed methods are 'GET', 'POST', 'PUT' and 'DELETE'.");
 }   
 ?>

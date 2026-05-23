@@ -29,9 +29,9 @@ public class LetoCorrectnessChecks {
             
             Long count = lengths.get(subtype);
             if (count == null) {
-                count = new Long(1);
+                count = Long.valueOf(1);
             } else {
-                count = new Long(count.longValue() + 1);
+                count = Long.valueOf(count.longValue() + 1);
             }
             lengths.put(subtype, count);
             
@@ -53,7 +53,7 @@ public class LetoCorrectnessChecks {
                 if (numberCount == null) {
                     numberCount = len;
                 } else {
-                    numberCount = new Long(numberCount.longValue() + len.longValue());
+                    numberCount = Long.valueOf(numberCount.longValue() + len.longValue());
                 }
                 lengths.put(type, numberCount);
 

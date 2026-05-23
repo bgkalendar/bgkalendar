@@ -201,41 +201,41 @@ public class LetoJulian extends LetoBase {
       //----------------------------
       //Month
       Map<LetoPeriodType, Long> month_28_DAYSLengths = new HashMap<LetoPeriodType, Long>(1);
-      month_28_DAYSLengths.put(LetoJulian.DAY_PERIOD_TYPE, new Long(28));
+      month_28_DAYSLengths.put(LetoJulian.DAY_PERIOD_TYPE, Long.valueOf(28));
       LetoJulian.MONTH_28_DAYS.setTotalLengthInPeriodTypes(month_28_DAYSLengths);
       //----------------------------
       //Month
       Map<LetoPeriodType, Long> month_29_DAYSLengths = new HashMap<LetoPeriodType, Long>(1);
-      month_29_DAYSLengths.put(LetoJulian.DAY_PERIOD_TYPE, new Long(29));
+      month_29_DAYSLengths.put(LetoJulian.DAY_PERIOD_TYPE, Long.valueOf(29));
       LetoJulian.MONTH_29_DAYS.setTotalLengthInPeriodTypes(month_29_DAYSLengths);
       //----------------------------
       //Month
       Map<LetoPeriodType, Long> month_30_DAYSLengths = new HashMap<LetoPeriodType, Long>(1);
-      month_30_DAYSLengths.put(LetoJulian.DAY_PERIOD_TYPE, new Long(30));
+      month_30_DAYSLengths.put(LetoJulian.DAY_PERIOD_TYPE, Long.valueOf(30));
       LetoJulian.MONTH_30_DAYS.setTotalLengthInPeriodTypes(month_30_DAYSLengths);
       //----------------------------
       //Month
       Map<LetoPeriodType, Long> month_31_DAYSLengths = new HashMap<LetoPeriodType, Long>(1);
-      month_31_DAYSLengths.put(LetoJulian.DAY_PERIOD_TYPE, new Long(31));
+      month_31_DAYSLengths.put(LetoJulian.DAY_PERIOD_TYPE, Long.valueOf(31));
       LetoJulian.MONTH_31_DAYS.setTotalLengthInPeriodTypes(month_31_DAYSLengths);
       //----------------------------
       //Year
       Map<LetoPeriodType, Long> yearLengths = new HashMap<LetoPeriodType, Long>(2);
-      yearLengths.put(LetoJulian.DAY_PERIOD_TYPE, new Long(365));
-      yearLengths.put(LetoJulian.MONTH_PERIOD_TYPE, new Long(12));
+      yearLengths.put(LetoJulian.DAY_PERIOD_TYPE, Long.valueOf(365));
+      yearLengths.put(LetoJulian.MONTH_PERIOD_TYPE, Long.valueOf(12));
       LetoJulian.YEAR.setTotalLengthInPeriodTypes(yearLengths);
       //----------------------------
       //Year
       Map<LetoPeriodType, Long> yearLeapLengths = new HashMap<LetoPeriodType, Long>(2);
-      yearLeapLengths.put(LetoJulian.DAY_PERIOD_TYPE, new Long(366));
-      yearLeapLengths.put(LetoJulian.MONTH_PERIOD_TYPE, new Long(12));
+      yearLeapLengths.put(LetoJulian.DAY_PERIOD_TYPE, Long.valueOf(366));
+      yearLeapLengths.put(LetoJulian.MONTH_PERIOD_TYPE, Long.valueOf(12));
       LetoJulian.YEAR_LEAP.setTotalLengthInPeriodTypes(yearLeapLengths);
       //----------------------------
       //4 Years
       Map<LetoPeriodType, Long> years4LeapLengths = new HashMap<LetoPeriodType, Long>(3);
-      years4LeapLengths.put(LetoJulian.DAY_PERIOD_TYPE, new Long(1461));
-      years4LeapLengths.put(LetoJulian.MONTH_PERIOD_TYPE, new Long(48));
-      years4LeapLengths.put(LetoJulian.YEAR_PERIOD_TYPE, new Long(4));
+      years4LeapLengths.put(LetoJulian.DAY_PERIOD_TYPE, Long.valueOf(1461));
+      years4LeapLengths.put(LetoJulian.MONTH_PERIOD_TYPE, Long.valueOf(48));
+      years4LeapLengths.put(LetoJulian.YEAR_PERIOD_TYPE, Long.valueOf(4));
       LetoJulian.YEARS_4_LEAP.setTotalLengthInPeriodTypes(years4LeapLengths);
     }
     
@@ -300,7 +300,7 @@ public class LetoJulian extends LetoBase {
             Long count = lengths.get(type);
             //System.out.println("" + type.getName() + ": " + (count == null ? 0 : count.longValue()) );
             String typeString = getTypeName(type);
-            System.out.println(structureString + ".put(" + typeString + ", new Long(" + (count == null ? 0 : count.longValue() )+ "));");
+            System.out.println(structureString + ".put(" + typeString + ", Long.valueOf(" + (count == null ? 0 : count.longValue() )+ "));");
         }
         System.out.println(structureStr + ".setTotalLengthInPeriodTypes(" + structureString + ");");
         

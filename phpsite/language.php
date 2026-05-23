@@ -95,7 +95,7 @@ function getPreferredLang() {
 function removeLocality($arr) {
   for ($i = 0; $i < count($arr); $i++) {
     $lang = $arr[$i]; 
-    if ($lang != null && strlen($lang) > 2 && $lang{2} == '-') {
+    if ($lang != null && strlen($lang) > 2 && $lang[2] == '-') {
       $lang = substr($lang, 0, 2);
       $arr[$i] = $lang;
     }
