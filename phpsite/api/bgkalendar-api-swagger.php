@@ -5,7 +5,7 @@ header("Access-Control-Allow-Methods: GET, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type, api_key, Authorization");
 
 $ssl      = ( ! empty( $_SERVER['HTTPS'] ) && $_SERVER['HTTPS'] == 'on' );
-$s = empty($_SERVER["HTTPS"]) ? '' : ($_SERVER["HTTPS"] == "on") ? "s" : "";
+$s = empty($_SERVER["HTTPS"]) ? '' : (($_SERVER["HTTPS"] == "on") ? "s" : "");
 $protocol = substr(strtolower($_SERVER["SERVER_PROTOCOL"]), 0, strpos(strtolower($_SERVER["SERVER_PROTOCOL"]), "/")) . $s;
 $port     = $_SERVER['SERVER_PORT'];
 $port     = ( ( ! $ssl && $port=='80' ) || ( $ssl && $port=='443' ) ) ? '' : ':'.$port;
@@ -15,6 +15,42 @@ $uri = substr($dir, $len);
 $server = $_SERVER['SERVER_NAME'];
 $fullurl = $protocol . "://" . $server . $port . $uri;
 
+
+// Respect reverse proxy headers so swagger host/scheme match public URL.
+if (!empty($_SERVER['HTTP_X_FORWARDED_HOST'])) {
+    $forwardedHostParts = explode(',', $_SERVER['HTTP_X_FORWARDED_HOST']);
+    $forwardedHost = trim($forwardedHostParts[0]);
+    if ($forwardedHost !== '') {
+        $server = $forwardedHost;
+    }
+}
+
+if (!empty($_SERVER['HTTP_X_FORWARDED_PROTO'])) {
+    $forwardedProtoParts = explode(',', $_SERVER['HTTP_X_FORWARDED_PROTO']);
+    $forwardedProto = strtolower(trim($forwardedProtoParts[0]));
+    if ($forwardedProto === 'http' || $forwardedProto === 'https') {
+        $protocol = $forwardedProto;
+    }
+}
+
+if (!empty($_SERVER['HTTP_X_FORWARDED_PORT'])) {
+    $forwardedPortParts = explode(',', $_SERVER['HTTP_X_FORWARDED_PORT']);
+    $forwardedPort = trim($forwardedPortParts[0]);
+    if ($forwardedPort !== '') {
+        $port = (($protocol === 'http' && $forwardedPort === '80') || ($protocol === 'https' && $forwardedPort === '443')) ? '' : ':' . $forwardedPort;
+    }
+} else {
+    $hostPortPos = strrpos($server, ':');
+    if ($hostPortPos !== false) {
+        $hostPort = substr($server, $hostPortPos + 1);
+        if (ctype_digit($hostPort)) {
+            $server = substr($server, 0, $hostPortPos);
+            $port = (($protocol === 'http' && $hostPort === '80') || ($protocol === 'https' && $hostPort === '443')) ? '' : ':' . $hostPort;
+        }
+    }
+}
+
+$fullurl = $protocol . "://" . $server . $port . $uri;
 ?>
 {
     "swagger": "2.0",

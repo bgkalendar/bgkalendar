@@ -358,206 +358,206 @@ public class LetoBulgarian extends LetoBase {
       //----------------------------
       //Month
       Map<LetoPeriodType, Long> LetoBulgarian_FIRST_31Lengths = new HashMap<LetoPeriodType, Long>(1);
-      LetoBulgarian_FIRST_31Lengths.put(LetoBulgarian.DAY_PERIOD_TYPE, new Long(31));
+      LetoBulgarian_FIRST_31Lengths.put(LetoBulgarian.DAY_PERIOD_TYPE, Long.valueOf(31));
       LetoBulgarian.FIRST_31.setTotalLengthInPeriodTypes(LetoBulgarian_FIRST_31Lengths);
       //----------------------------
       //Month
       Map<LetoPeriodType, Long> LetoBulgarian_SECOND_30Lengths = new HashMap<LetoPeriodType, Long>(1);
-      LetoBulgarian_SECOND_30Lengths.put(LetoBulgarian.DAY_PERIOD_TYPE, new Long(30));
+      LetoBulgarian_SECOND_30Lengths.put(LetoBulgarian.DAY_PERIOD_TYPE, Long.valueOf(30));
       LetoBulgarian.SECOND_30.setTotalLengthInPeriodTypes(LetoBulgarian_SECOND_30Lengths);
       //----------------------------
       //Month
       Map<LetoPeriodType, Long> LetoBulgarian_THIRD_30Lengths = new HashMap<LetoPeriodType, Long>(1);
-      LetoBulgarian_THIRD_30Lengths.put(LetoBulgarian.DAY_PERIOD_TYPE, new Long(30));
+      LetoBulgarian_THIRD_30Lengths.put(LetoBulgarian.DAY_PERIOD_TYPE, Long.valueOf(30));
       LetoBulgarian.THIRD_30.setTotalLengthInPeriodTypes(LetoBulgarian_THIRD_30Lengths);
       //----------------------------
       //Month
       Map<LetoPeriodType, Long> LetoBulgarian_FOURTH_31Lengths = new HashMap<LetoPeriodType, Long>(1);
-      LetoBulgarian_FOURTH_31Lengths.put(LetoBulgarian.DAY_PERIOD_TYPE, new Long(31));
+      LetoBulgarian_FOURTH_31Lengths.put(LetoBulgarian.DAY_PERIOD_TYPE, Long.valueOf(31));
       LetoBulgarian.FOURTH_31.setTotalLengthInPeriodTypes(LetoBulgarian_FOURTH_31Lengths);
       //----------------------------
       //Month
       Map<LetoPeriodType, Long> LetoBulgarian_FIFTH_30Lengths = new HashMap<LetoPeriodType, Long>(1);
-      LetoBulgarian_FIFTH_30Lengths.put(LetoBulgarian.DAY_PERIOD_TYPE, new Long(30));
+      LetoBulgarian_FIFTH_30Lengths.put(LetoBulgarian.DAY_PERIOD_TYPE, Long.valueOf(30));
       LetoBulgarian.FIFTH_30.setTotalLengthInPeriodTypes(LetoBulgarian_FIFTH_30Lengths);
       //----------------------------
       //Month
       Map<LetoPeriodType, Long> LetoBulgarian_SIXTH_30Lengths = new HashMap<LetoPeriodType, Long>(1);
-      LetoBulgarian_SIXTH_30Lengths.put(LetoBulgarian.DAY_PERIOD_TYPE, new Long(30));
+      LetoBulgarian_SIXTH_30Lengths.put(LetoBulgarian.DAY_PERIOD_TYPE, Long.valueOf(30));
       LetoBulgarian.SIXTH_30.setTotalLengthInPeriodTypes(LetoBulgarian_SIXTH_30Lengths);
       //----------------------------
       //Month
       Map<LetoPeriodType, Long> LetoBulgarian_SIXTH_31Lengths = new HashMap<LetoPeriodType, Long>(1);
-      LetoBulgarian_SIXTH_31Lengths.put(LetoBulgarian.DAY_PERIOD_TYPE, new Long(31));
+      LetoBulgarian_SIXTH_31Lengths.put(LetoBulgarian.DAY_PERIOD_TYPE, Long.valueOf(31));
       LetoBulgarian.SIXTH_31.setTotalLengthInPeriodTypes(LetoBulgarian_SIXTH_31Lengths);
       //----------------------------
       //Month
       Map<LetoPeriodType, Long> LetoBulgarian_SEVENTH_31Lengths = new HashMap<LetoPeriodType, Long>(1);
-      LetoBulgarian_SEVENTH_31Lengths.put(LetoBulgarian.DAY_PERIOD_TYPE, new Long(31));
+      LetoBulgarian_SEVENTH_31Lengths.put(LetoBulgarian.DAY_PERIOD_TYPE, Long.valueOf(31));
       LetoBulgarian.SEVENTH_31.setTotalLengthInPeriodTypes(LetoBulgarian_SEVENTH_31Lengths);
       //----------------------------
       //Month
       Map<LetoPeriodType, Long> LetoBulgarian__EIGHTH_30Lengths = new HashMap<LetoPeriodType, Long>(1);
-      LetoBulgarian__EIGHTH_30Lengths.put(LetoBulgarian.DAY_PERIOD_TYPE, new Long(30));
+      LetoBulgarian__EIGHTH_30Lengths.put(LetoBulgarian.DAY_PERIOD_TYPE, Long.valueOf(30));
       LetoBulgarian.EIGHTH_30.setTotalLengthInPeriodTypes(LetoBulgarian__EIGHTH_30Lengths);
       //----------------------------
       //Month
       Map<LetoPeriodType, Long> LetoBulgarian_NINTH_30Lengths = new HashMap<LetoPeriodType, Long>(1);
-      LetoBulgarian_NINTH_30Lengths.put(LetoBulgarian.DAY_PERIOD_TYPE, new Long(30));
+      LetoBulgarian_NINTH_30Lengths.put(LetoBulgarian.DAY_PERIOD_TYPE, Long.valueOf(30));
       LetoBulgarian.NINTH_30.setTotalLengthInPeriodTypes(LetoBulgarian_NINTH_30Lengths);
       //----------------------------
       //Month
       Map<LetoPeriodType, Long> LetoBulgarian_TENTH_31Lengths = new HashMap<LetoPeriodType, Long>(1);
-      LetoBulgarian_TENTH_31Lengths.put(LetoBulgarian.DAY_PERIOD_TYPE, new Long(31));
+      LetoBulgarian_TENTH_31Lengths.put(LetoBulgarian.DAY_PERIOD_TYPE, Long.valueOf(31));
       LetoBulgarian.TENTH_31.setTotalLengthInPeriodTypes(LetoBulgarian_TENTH_31Lengths);
       //----------------------------
       //Month
       Map<LetoPeriodType, Long> LetoBulgarian_ELEVENTH_30Lengths = new HashMap<LetoPeriodType, Long>(1);
-      LetoBulgarian_ELEVENTH_30Lengths.put(LetoBulgarian.DAY_PERIOD_TYPE, new Long(30));
+      LetoBulgarian_ELEVENTH_30Lengths.put(LetoBulgarian.DAY_PERIOD_TYPE, Long.valueOf(30));
       LetoBulgarian.ELEVENTH_30.setTotalLengthInPeriodTypes(LetoBulgarian_ELEVENTH_30Lengths);
       //----------------------------
       //Month
       Map<LetoPeriodType, Long> LetoBulgarian_TWELVTH_31Lengths = new HashMap<LetoPeriodType, Long>(1);
-      LetoBulgarian_TWELVTH_31Lengths.put(LetoBulgarian.DAY_PERIOD_TYPE, new Long(31));
+      LetoBulgarian_TWELVTH_31Lengths.put(LetoBulgarian.DAY_PERIOD_TYPE, Long.valueOf(31));
       LetoBulgarian.TWELVTH_31.setTotalLengthInPeriodTypes(LetoBulgarian_TWELVTH_31Lengths);
       //----------------------------
       //Year
       Map<LetoPeriodType, Long> LetoBulgarian_YEARLengths = new HashMap<LetoPeriodType, Long>(2);
-      LetoBulgarian_YEARLengths.put(LetoBulgarian.DAY_PERIOD_TYPE, new Long(365));
-      LetoBulgarian_YEARLengths.put(LetoBulgarian.MONTH_PERIOD_TYPE, new Long(12));
+      LetoBulgarian_YEARLengths.put(LetoBulgarian.DAY_PERIOD_TYPE, Long.valueOf(365));
+      LetoBulgarian_YEARLengths.put(LetoBulgarian.MONTH_PERIOD_TYPE, Long.valueOf(12));
       LetoBulgarian.YEAR.setTotalLengthInPeriodTypes(LetoBulgarian_YEARLengths);
       //----------------------------
       //Year
       Map<LetoPeriodType, Long> LetoBulgarian_YEAR_LEAPLengths = new HashMap<LetoPeriodType, Long>(2);
-      LetoBulgarian_YEAR_LEAPLengths.put(LetoBulgarian.DAY_PERIOD_TYPE, new Long(366));
-      LetoBulgarian_YEAR_LEAPLengths.put(LetoBulgarian.MONTH_PERIOD_TYPE, new Long(12));
+      LetoBulgarian_YEAR_LEAPLengths.put(LetoBulgarian.DAY_PERIOD_TYPE, Long.valueOf(366));
+      LetoBulgarian_YEAR_LEAPLengths.put(LetoBulgarian.MONTH_PERIOD_TYPE, Long.valueOf(12));
       LetoBulgarian.YEAR_LEAP.setTotalLengthInPeriodTypes(LetoBulgarian_YEAR_LEAPLengths);
       //----------------------------
       //4 years
       Map<LetoPeriodType, Long> LetoBulgarian_YEARS_4Lengths = new HashMap<LetoPeriodType, Long>(3);
-      LetoBulgarian_YEARS_4Lengths.put(LetoBulgarian.YEAR_PERIOD_TYPE, new Long(4));
-      LetoBulgarian_YEARS_4Lengths.put(LetoBulgarian.DAY_PERIOD_TYPE, new Long(1460));
-      LetoBulgarian_YEARS_4Lengths.put(LetoBulgarian.MONTH_PERIOD_TYPE, new Long(48));
+      LetoBulgarian_YEARS_4Lengths.put(LetoBulgarian.YEAR_PERIOD_TYPE, Long.valueOf(4));
+      LetoBulgarian_YEARS_4Lengths.put(LetoBulgarian.DAY_PERIOD_TYPE, Long.valueOf(1460));
+      LetoBulgarian_YEARS_4Lengths.put(LetoBulgarian.MONTH_PERIOD_TYPE, Long.valueOf(48));
       LetoBulgarian.YEARS_4.setTotalLengthInPeriodTypes(LetoBulgarian_YEARS_4Lengths);
       //----------------------------
       //4 years
       Map<LetoPeriodType, Long> LetoBulgarian_YEARS_4_LEAPLengths = new HashMap<LetoPeriodType, Long>(3);
-      LetoBulgarian_YEARS_4_LEAPLengths.put(LetoBulgarian.YEAR_PERIOD_TYPE, new Long(4));
-      LetoBulgarian_YEARS_4_LEAPLengths.put(LetoBulgarian.DAY_PERIOD_TYPE, new Long(1461));
-      LetoBulgarian_YEARS_4_LEAPLengths.put(LetoBulgarian.MONTH_PERIOD_TYPE, new Long(48));
+      LetoBulgarian_YEARS_4_LEAPLengths.put(LetoBulgarian.YEAR_PERIOD_TYPE, Long.valueOf(4));
+      LetoBulgarian_YEARS_4_LEAPLengths.put(LetoBulgarian.DAY_PERIOD_TYPE, Long.valueOf(1461));
+      LetoBulgarian_YEARS_4_LEAPLengths.put(LetoBulgarian.MONTH_PERIOD_TYPE, Long.valueOf(48));
       LetoBulgarian.YEARS_4_LEAP.setTotalLengthInPeriodTypes(LetoBulgarian_YEARS_4_LEAPLengths);
       //----------------------------
       //Star Day
       Map<LetoPeriodType, Long> LetoBulgarian_STAR_DAYLengths = new HashMap<LetoPeriodType, Long>(4);
-      LetoBulgarian_STAR_DAYLengths.put(LetoBulgarian.YEARS_4_PERIOD_TYPE, new Long(15));
-      LetoBulgarian_STAR_DAYLengths.put(LetoBulgarian.YEAR_PERIOD_TYPE, new Long(60));
-      LetoBulgarian_STAR_DAYLengths.put(LetoBulgarian.DAY_PERIOD_TYPE, new Long(21914));
-      LetoBulgarian_STAR_DAYLengths.put(LetoBulgarian.MONTH_PERIOD_TYPE, new Long(720));
+      LetoBulgarian_STAR_DAYLengths.put(LetoBulgarian.YEARS_4_PERIOD_TYPE, Long.valueOf(15));
+      LetoBulgarian_STAR_DAYLengths.put(LetoBulgarian.YEAR_PERIOD_TYPE, Long.valueOf(60));
+      LetoBulgarian_STAR_DAYLengths.put(LetoBulgarian.DAY_PERIOD_TYPE, Long.valueOf(21914));
+      LetoBulgarian_STAR_DAYLengths.put(LetoBulgarian.MONTH_PERIOD_TYPE, Long.valueOf(720));
       LetoBulgarian.STAR_DAY.setTotalLengthInPeriodTypes(LetoBulgarian_STAR_DAYLengths);
       //----------------------------
       //Star Day
       Map<LetoPeriodType, Long> LetoBulgarian_STAR_DAY_LEAPLengths = new HashMap<LetoPeriodType, Long>(4);
-      LetoBulgarian_STAR_DAY_LEAPLengths.put(LetoBulgarian.YEARS_4_PERIOD_TYPE, new Long(15));
-      LetoBulgarian_STAR_DAY_LEAPLengths.put(LetoBulgarian.YEAR_PERIOD_TYPE, new Long(60));
-      LetoBulgarian_STAR_DAY_LEAPLengths.put(LetoBulgarian.DAY_PERIOD_TYPE, new Long(21915));
-      LetoBulgarian_STAR_DAY_LEAPLengths.put(LetoBulgarian.MONTH_PERIOD_TYPE, new Long(720));
+      LetoBulgarian_STAR_DAY_LEAPLengths.put(LetoBulgarian.YEARS_4_PERIOD_TYPE, Long.valueOf(15));
+      LetoBulgarian_STAR_DAY_LEAPLengths.put(LetoBulgarian.YEAR_PERIOD_TYPE, Long.valueOf(60));
+      LetoBulgarian_STAR_DAY_LEAPLengths.put(LetoBulgarian.DAY_PERIOD_TYPE, Long.valueOf(21915));
+      LetoBulgarian_STAR_DAY_LEAPLengths.put(LetoBulgarian.MONTH_PERIOD_TYPE, Long.valueOf(720));
       LetoBulgarian.STAR_DAY_LEAP.setTotalLengthInPeriodTypes(LetoBulgarian_STAR_DAY_LEAPLengths);
       //----------------------------
       //Star Week
       Map<LetoPeriodType, Long> LetoBulgarian_STAR_WEEKLengths = new HashMap<LetoPeriodType, Long>(5);
-      LetoBulgarian_STAR_WEEKLengths.put(LetoBulgarian.STAR_DAY_PERIOD_TYPE, new Long(7));
-      LetoBulgarian_STAR_WEEKLengths.put(LetoBulgarian.YEARS_4_PERIOD_TYPE, new Long(105));
-      LetoBulgarian_STAR_WEEKLengths.put(LetoBulgarian.YEAR_PERIOD_TYPE, new Long(420));
-      LetoBulgarian_STAR_WEEKLengths.put(LetoBulgarian.DAY_PERIOD_TYPE, new Long(153401));
-      LetoBulgarian_STAR_WEEKLengths.put(LetoBulgarian.MONTH_PERIOD_TYPE, new Long(5040));
+      LetoBulgarian_STAR_WEEKLengths.put(LetoBulgarian.STAR_DAY_PERIOD_TYPE, Long.valueOf(7));
+      LetoBulgarian_STAR_WEEKLengths.put(LetoBulgarian.YEARS_4_PERIOD_TYPE, Long.valueOf(105));
+      LetoBulgarian_STAR_WEEKLengths.put(LetoBulgarian.YEAR_PERIOD_TYPE, Long.valueOf(420));
+      LetoBulgarian_STAR_WEEKLengths.put(LetoBulgarian.DAY_PERIOD_TYPE, Long.valueOf(153401));
+      LetoBulgarian_STAR_WEEKLengths.put(LetoBulgarian.MONTH_PERIOD_TYPE, Long.valueOf(5040));
       LetoBulgarian.STAR_WEEK.setTotalLengthInPeriodTypes(LetoBulgarian_STAR_WEEKLengths);
       //----------------------------
       //Star Week
       Map<LetoPeriodType, Long> LetoBulgarian_STAR_WEEK_LEAPLengths = new HashMap<LetoPeriodType, Long>(5);
-      LetoBulgarian_STAR_WEEK_LEAPLengths.put(LetoBulgarian.STAR_DAY_PERIOD_TYPE, new Long(7));
-      LetoBulgarian_STAR_WEEK_LEAPLengths.put(LetoBulgarian.YEARS_4_PERIOD_TYPE, new Long(105));
-      LetoBulgarian_STAR_WEEK_LEAPLengths.put(LetoBulgarian.YEAR_PERIOD_TYPE, new Long(420));
-      LetoBulgarian_STAR_WEEK_LEAPLengths.put(LetoBulgarian.DAY_PERIOD_TYPE, new Long(153402));
-      LetoBulgarian_STAR_WEEK_LEAPLengths.put(LetoBulgarian.MONTH_PERIOD_TYPE, new Long(5040));
+      LetoBulgarian_STAR_WEEK_LEAPLengths.put(LetoBulgarian.STAR_DAY_PERIOD_TYPE, Long.valueOf(7));
+      LetoBulgarian_STAR_WEEK_LEAPLengths.put(LetoBulgarian.YEARS_4_PERIOD_TYPE, Long.valueOf(105));
+      LetoBulgarian_STAR_WEEK_LEAPLengths.put(LetoBulgarian.YEAR_PERIOD_TYPE, Long.valueOf(420));
+      LetoBulgarian_STAR_WEEK_LEAPLengths.put(LetoBulgarian.DAY_PERIOD_TYPE, Long.valueOf(153402));
+      LetoBulgarian_STAR_WEEK_LEAPLengths.put(LetoBulgarian.MONTH_PERIOD_TYPE, Long.valueOf(5040));
       LetoBulgarian.STAR_WEEK_LEAP.setTotalLengthInPeriodTypes(LetoBulgarian_STAR_WEEK_LEAPLengths);
       //----------------------------
       //Star Month
       Map<LetoPeriodType, Long> LetoBulgarian_STAR_MONTHLengths = new HashMap<LetoPeriodType, Long>(6);
-      LetoBulgarian_STAR_MONTHLengths.put(LetoBulgarian.STAR_DAY_PERIOD_TYPE, new Long(28));
-      LetoBulgarian_STAR_MONTHLengths.put(LetoBulgarian.YEARS_4_PERIOD_TYPE, new Long(420));
-      LetoBulgarian_STAR_MONTHLengths.put(LetoBulgarian.YEAR_PERIOD_TYPE, new Long(1680));
-      LetoBulgarian_STAR_MONTHLengths.put(LetoBulgarian.DAY_PERIOD_TYPE, new Long(613606));
-      LetoBulgarian_STAR_MONTHLengths.put(LetoBulgarian.MONTH_PERIOD_TYPE, new Long(20160));
-      LetoBulgarian_STAR_MONTHLengths.put(LetoBulgarian.STAR_WEEK_PERIOD_TYPE, new Long(4));
+      LetoBulgarian_STAR_MONTHLengths.put(LetoBulgarian.STAR_DAY_PERIOD_TYPE, Long.valueOf(28));
+      LetoBulgarian_STAR_MONTHLengths.put(LetoBulgarian.YEARS_4_PERIOD_TYPE, Long.valueOf(420));
+      LetoBulgarian_STAR_MONTHLengths.put(LetoBulgarian.YEAR_PERIOD_TYPE, Long.valueOf(1680));
+      LetoBulgarian_STAR_MONTHLengths.put(LetoBulgarian.DAY_PERIOD_TYPE, Long.valueOf(613606));
+      LetoBulgarian_STAR_MONTHLengths.put(LetoBulgarian.MONTH_PERIOD_TYPE, Long.valueOf(20160));
+      LetoBulgarian_STAR_MONTHLengths.put(LetoBulgarian.STAR_WEEK_PERIOD_TYPE, Long.valueOf(4));
       LetoBulgarian.STAR_MONTH.setTotalLengthInPeriodTypes(LetoBulgarian_STAR_MONTHLengths);
       //----------------------------
       //Star Month
       Map<LetoPeriodType, Long> LetoBulgarian_STAR_MONTH_LEAPLengths = new HashMap<LetoPeriodType, Long>(6);
-      LetoBulgarian_STAR_MONTH_LEAPLengths.put(LetoBulgarian.STAR_DAY_PERIOD_TYPE, new Long(28));
-      LetoBulgarian_STAR_MONTH_LEAPLengths.put(LetoBulgarian.YEARS_4_PERIOD_TYPE, new Long(420));
-      LetoBulgarian_STAR_MONTH_LEAPLengths.put(LetoBulgarian.YEAR_PERIOD_TYPE, new Long(1680));
-      LetoBulgarian_STAR_MONTH_LEAPLengths.put(LetoBulgarian.DAY_PERIOD_TYPE, new Long(613607));
-      LetoBulgarian_STAR_MONTH_LEAPLengths.put(LetoBulgarian.MONTH_PERIOD_TYPE, new Long(20160));
-      LetoBulgarian_STAR_MONTH_LEAPLengths.put(LetoBulgarian.STAR_WEEK_PERIOD_TYPE, new Long(4));
+      LetoBulgarian_STAR_MONTH_LEAPLengths.put(LetoBulgarian.STAR_DAY_PERIOD_TYPE, Long.valueOf(28));
+      LetoBulgarian_STAR_MONTH_LEAPLengths.put(LetoBulgarian.YEARS_4_PERIOD_TYPE, Long.valueOf(420));
+      LetoBulgarian_STAR_MONTH_LEAPLengths.put(LetoBulgarian.YEAR_PERIOD_TYPE, Long.valueOf(1680));
+      LetoBulgarian_STAR_MONTH_LEAPLengths.put(LetoBulgarian.DAY_PERIOD_TYPE, Long.valueOf(613607));
+      LetoBulgarian_STAR_MONTH_LEAPLengths.put(LetoBulgarian.MONTH_PERIOD_TYPE, Long.valueOf(20160));
+      LetoBulgarian_STAR_MONTH_LEAPLengths.put(LetoBulgarian.STAR_WEEK_PERIOD_TYPE, Long.valueOf(4));
       LetoBulgarian.STAR_MONTH_LEAP.setTotalLengthInPeriodTypes(LetoBulgarian_STAR_MONTH_LEAPLengths);
       //----------------------------
       //Star Year
       Map<LetoPeriodType, Long> LetoBulgarian_STAR_YEARLengths = new HashMap<LetoPeriodType, Long>(7);
-      LetoBulgarian_STAR_YEARLengths.put(LetoBulgarian.STAR_DAY_PERIOD_TYPE, new Long(336));
-      LetoBulgarian_STAR_YEARLengths.put(LetoBulgarian.YEARS_4_PERIOD_TYPE, new Long(5040));
-      LetoBulgarian_STAR_YEARLengths.put(LetoBulgarian.YEAR_PERIOD_TYPE, new Long(20160));
-      LetoBulgarian_STAR_YEARLengths.put(LetoBulgarian.DAY_PERIOD_TYPE, new Long(7363282));
-      LetoBulgarian_STAR_YEARLengths.put(LetoBulgarian.STAR_WEEK_PERIOD_TYPE, new Long(48));
-      LetoBulgarian_STAR_YEARLengths.put(LetoBulgarian.MONTH_PERIOD_TYPE, new Long(241920));
-      LetoBulgarian_STAR_YEARLengths.put(LetoBulgarian.STAR_MONTH_PERIOD_TYPE, new Long(12));
+      LetoBulgarian_STAR_YEARLengths.put(LetoBulgarian.STAR_DAY_PERIOD_TYPE, Long.valueOf(336));
+      LetoBulgarian_STAR_YEARLengths.put(LetoBulgarian.YEARS_4_PERIOD_TYPE, Long.valueOf(5040));
+      LetoBulgarian_STAR_YEARLengths.put(LetoBulgarian.YEAR_PERIOD_TYPE, Long.valueOf(20160));
+      LetoBulgarian_STAR_YEARLengths.put(LetoBulgarian.DAY_PERIOD_TYPE, Long.valueOf(7363282));
+      LetoBulgarian_STAR_YEARLengths.put(LetoBulgarian.STAR_WEEK_PERIOD_TYPE, Long.valueOf(48));
+      LetoBulgarian_STAR_YEARLengths.put(LetoBulgarian.MONTH_PERIOD_TYPE, Long.valueOf(241920));
+      LetoBulgarian_STAR_YEARLengths.put(LetoBulgarian.STAR_MONTH_PERIOD_TYPE, Long.valueOf(12));
       LetoBulgarian.STAR_YEAR.setTotalLengthInPeriodTypes(LetoBulgarian_STAR_YEARLengths);
       //----------------------------
       //Star Year
       Map<LetoPeriodType, Long> LetoBulgarian_STAR_YEAR_LEAPLengths = new HashMap<LetoPeriodType, Long>(7);
-      LetoBulgarian_STAR_YEAR_LEAPLengths.put(LetoBulgarian.STAR_DAY_PERIOD_TYPE, new Long(336));
-      LetoBulgarian_STAR_YEAR_LEAPLengths.put(LetoBulgarian.YEARS_4_PERIOD_TYPE, new Long(5040));
-      LetoBulgarian_STAR_YEAR_LEAPLengths.put(LetoBulgarian.YEAR_PERIOD_TYPE, new Long(20160));
-      LetoBulgarian_STAR_YEAR_LEAPLengths.put(LetoBulgarian.DAY_PERIOD_TYPE, new Long(7363283));
-      LetoBulgarian_STAR_YEAR_LEAPLengths.put(LetoBulgarian.STAR_WEEK_PERIOD_TYPE, new Long(48));
-      LetoBulgarian_STAR_YEAR_LEAPLengths.put(LetoBulgarian.MONTH_PERIOD_TYPE, new Long(241920));
-      LetoBulgarian_STAR_YEAR_LEAPLengths.put(LetoBulgarian.STAR_MONTH_PERIOD_TYPE, new Long(12));
+      LetoBulgarian_STAR_YEAR_LEAPLengths.put(LetoBulgarian.STAR_DAY_PERIOD_TYPE, Long.valueOf(336));
+      LetoBulgarian_STAR_YEAR_LEAPLengths.put(LetoBulgarian.YEARS_4_PERIOD_TYPE, Long.valueOf(5040));
+      LetoBulgarian_STAR_YEAR_LEAPLengths.put(LetoBulgarian.YEAR_PERIOD_TYPE, Long.valueOf(20160));
+      LetoBulgarian_STAR_YEAR_LEAPLengths.put(LetoBulgarian.DAY_PERIOD_TYPE, Long.valueOf(7363283));
+      LetoBulgarian_STAR_YEAR_LEAPLengths.put(LetoBulgarian.STAR_WEEK_PERIOD_TYPE, Long.valueOf(48));
+      LetoBulgarian_STAR_YEAR_LEAPLengths.put(LetoBulgarian.MONTH_PERIOD_TYPE, Long.valueOf(241920));
+      LetoBulgarian_STAR_YEAR_LEAPLengths.put(LetoBulgarian.STAR_MONTH_PERIOD_TYPE, Long.valueOf(12));
       LetoBulgarian.STAR_YEAR_LEAP.setTotalLengthInPeriodTypes(LetoBulgarian_STAR_YEAR_LEAPLengths);
       //----------------------------
       //Star 4 Years Period
       Map<LetoPeriodType, Long> LetoBulgarian_STAR_YEARS_4_LEAPLengths = new HashMap<LetoPeriodType, Long>(8);
-      LetoBulgarian_STAR_YEARS_4_LEAPLengths.put(LetoBulgarian.STAR_DAY_PERIOD_TYPE, new Long(1344));
-      LetoBulgarian_STAR_YEARS_4_LEAPLengths.put(LetoBulgarian.YEARS_4_PERIOD_TYPE, new Long(20160));
-      LetoBulgarian_STAR_YEARS_4_LEAPLengths.put(LetoBulgarian.YEAR_PERIOD_TYPE, new Long(80640));
-      LetoBulgarian_STAR_YEARS_4_LEAPLengths.put(LetoBulgarian.DAY_PERIOD_TYPE, new Long(29453132));
-      LetoBulgarian_STAR_YEARS_4_LEAPLengths.put(LetoBulgarian.STAR_YEAR_PERIOD_TYPE, new Long(4));
-      LetoBulgarian_STAR_YEARS_4_LEAPLengths.put(LetoBulgarian.MONTH_PERIOD_TYPE, new Long(967680));
-      LetoBulgarian_STAR_YEARS_4_LEAPLengths.put(LetoBulgarian.STAR_WEEK_PERIOD_TYPE, new Long(192));
-      LetoBulgarian_STAR_YEARS_4_LEAPLengths.put(LetoBulgarian.STAR_MONTH_PERIOD_TYPE, new Long(48));
+      LetoBulgarian_STAR_YEARS_4_LEAPLengths.put(LetoBulgarian.STAR_DAY_PERIOD_TYPE, Long.valueOf(1344));
+      LetoBulgarian_STAR_YEARS_4_LEAPLengths.put(LetoBulgarian.YEARS_4_PERIOD_TYPE, Long.valueOf(20160));
+      LetoBulgarian_STAR_YEARS_4_LEAPLengths.put(LetoBulgarian.YEAR_PERIOD_TYPE, Long.valueOf(80640));
+      LetoBulgarian_STAR_YEARS_4_LEAPLengths.put(LetoBulgarian.DAY_PERIOD_TYPE, Long.valueOf(29453132));
+      LetoBulgarian_STAR_YEARS_4_LEAPLengths.put(LetoBulgarian.STAR_YEAR_PERIOD_TYPE, Long.valueOf(4));
+      LetoBulgarian_STAR_YEARS_4_LEAPLengths.put(LetoBulgarian.MONTH_PERIOD_TYPE, Long.valueOf(967680));
+      LetoBulgarian_STAR_YEARS_4_LEAPLengths.put(LetoBulgarian.STAR_WEEK_PERIOD_TYPE, Long.valueOf(192));
+      LetoBulgarian_STAR_YEARS_4_LEAPLengths.put(LetoBulgarian.STAR_MONTH_PERIOD_TYPE, Long.valueOf(48));
       LetoBulgarian.STAR_YEARS_4_LEAP.setTotalLengthInPeriodTypes(LetoBulgarian_STAR_YEARS_4_LEAPLengths);
       //----------------------------
       //Star 4 Years Period
       Map<LetoPeriodType, Long> LetoBulgarian_STAR_YEARS_4Lengths = new HashMap<LetoPeriodType, Long>(8);
-      LetoBulgarian_STAR_YEARS_4Lengths.put(LetoBulgarian.STAR_DAY_PERIOD_TYPE, new Long(1344));
-      LetoBulgarian_STAR_YEARS_4Lengths.put(LetoBulgarian.YEARS_4_PERIOD_TYPE, new Long(20160));
-      LetoBulgarian_STAR_YEARS_4Lengths.put(LetoBulgarian.YEAR_PERIOD_TYPE, new Long(80640));
-      LetoBulgarian_STAR_YEARS_4Lengths.put(LetoBulgarian.DAY_PERIOD_TYPE, new Long(29453131));
-      LetoBulgarian_STAR_YEARS_4Lengths.put(LetoBulgarian.STAR_YEAR_PERIOD_TYPE, new Long(4));
-      LetoBulgarian_STAR_YEARS_4Lengths.put(LetoBulgarian.MONTH_PERIOD_TYPE, new Long(967680));
-      LetoBulgarian_STAR_YEARS_4Lengths.put(LetoBulgarian.STAR_WEEK_PERIOD_TYPE, new Long(192));
-      LetoBulgarian_STAR_YEARS_4Lengths.put(LetoBulgarian.STAR_MONTH_PERIOD_TYPE, new Long(48));
+      LetoBulgarian_STAR_YEARS_4Lengths.put(LetoBulgarian.STAR_DAY_PERIOD_TYPE, Long.valueOf(1344));
+      LetoBulgarian_STAR_YEARS_4Lengths.put(LetoBulgarian.YEARS_4_PERIOD_TYPE, Long.valueOf(20160));
+      LetoBulgarian_STAR_YEARS_4Lengths.put(LetoBulgarian.YEAR_PERIOD_TYPE, Long.valueOf(80640));
+      LetoBulgarian_STAR_YEARS_4Lengths.put(LetoBulgarian.DAY_PERIOD_TYPE, Long.valueOf(29453131));
+      LetoBulgarian_STAR_YEARS_4Lengths.put(LetoBulgarian.STAR_YEAR_PERIOD_TYPE, Long.valueOf(4));
+      LetoBulgarian_STAR_YEARS_4Lengths.put(LetoBulgarian.MONTH_PERIOD_TYPE, Long.valueOf(967680));
+      LetoBulgarian_STAR_YEARS_4Lengths.put(LetoBulgarian.STAR_WEEK_PERIOD_TYPE, Long.valueOf(192));
+      LetoBulgarian_STAR_YEARS_4Lengths.put(LetoBulgarian.STAR_MONTH_PERIOD_TYPE, Long.valueOf(48));
       LetoBulgarian.STAR_YEARS_4.setTotalLengthInPeriodTypes(LetoBulgarian_STAR_YEARS_4Lengths);
       //----------------------------
       //Star 125 Years Period
       Map<LetoPeriodType, Long> LetoBulgarian_STAR_YEARS_4x125Lengths = new HashMap<LetoPeriodType, Long>(9);
-      LetoBulgarian_STAR_YEARS_4x125Lengths.put(LetoBulgarian.STAR_DAY_PERIOD_TYPE, new Long(168000));
-      LetoBulgarian_STAR_YEARS_4x125Lengths.put(LetoBulgarian.YEARS_4_PERIOD_TYPE, new Long(2520000));
-      LetoBulgarian_STAR_YEARS_4x125Lengths.put(LetoBulgarian.YEAR_PERIOD_TYPE, new Long(10080000));
-      LetoBulgarian_STAR_YEARS_4x125Lengths.put(LetoBulgarian.DAY_PERIOD_TYPE, new Long(3681641376L));
-      LetoBulgarian_STAR_YEARS_4x125Lengths.put(LetoBulgarian.STAR_YEAR_4_PERIOD_TYPE, new Long(125));
-      LetoBulgarian_STAR_YEARS_4x125Lengths.put(LetoBulgarian.STAR_YEAR_PERIOD_TYPE, new Long(500));
-      LetoBulgarian_STAR_YEARS_4x125Lengths.put(LetoBulgarian.STAR_WEEK_PERIOD_TYPE, new Long(24000));
-      LetoBulgarian_STAR_YEARS_4x125Lengths.put(LetoBulgarian.MONTH_PERIOD_TYPE, new Long(120960000));
-      LetoBulgarian_STAR_YEARS_4x125Lengths.put(LetoBulgarian.STAR_MONTH_PERIOD_TYPE, new Long(6000));
+      LetoBulgarian_STAR_YEARS_4x125Lengths.put(LetoBulgarian.STAR_DAY_PERIOD_TYPE, Long.valueOf(168000));
+      LetoBulgarian_STAR_YEARS_4x125Lengths.put(LetoBulgarian.YEARS_4_PERIOD_TYPE, Long.valueOf(2520000));
+      LetoBulgarian_STAR_YEARS_4x125Lengths.put(LetoBulgarian.YEAR_PERIOD_TYPE, Long.valueOf(10080000));
+      LetoBulgarian_STAR_YEARS_4x125Lengths.put(LetoBulgarian.DAY_PERIOD_TYPE, Long.valueOf(3681641376L));
+      LetoBulgarian_STAR_YEARS_4x125Lengths.put(LetoBulgarian.STAR_YEAR_4_PERIOD_TYPE, Long.valueOf(125));
+      LetoBulgarian_STAR_YEARS_4x125Lengths.put(LetoBulgarian.STAR_YEAR_PERIOD_TYPE, Long.valueOf(500));
+      LetoBulgarian_STAR_YEARS_4x125Lengths.put(LetoBulgarian.STAR_WEEK_PERIOD_TYPE, Long.valueOf(24000));
+      LetoBulgarian_STAR_YEARS_4x125Lengths.put(LetoBulgarian.MONTH_PERIOD_TYPE, Long.valueOf(120960000));
+      LetoBulgarian_STAR_YEARS_4x125Lengths.put(LetoBulgarian.STAR_MONTH_PERIOD_TYPE, Long.valueOf(6000));
       LetoBulgarian.STAR_YEARS_4x125.setTotalLengthInPeriodTypes(LetoBulgarian_STAR_YEARS_4x125Lengths);
 
 
@@ -685,7 +685,7 @@ public class LetoBulgarian extends LetoBase {
             Long count = lengths.get(type);
             //System.out.println("" + type.getName() + ": " + (count == null ? 0 : count.longValue()) );
             String typeString = getTypeName(type);
-            System.out.println(structureString + ".put(" + typeString + ", new Long(" + (count == null ? 0 : count.longValue() )+ "));");
+            System.out.println(structureString + ".put(" + typeString + ", Long.valueOf(" + (count == null ? 0 : count.longValue() )+ "));");
         }
         System.out.println(structureStr + ".setTotalLengthInPeriodTypes(" + structureString + ");");
         

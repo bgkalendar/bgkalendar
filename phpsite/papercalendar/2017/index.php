@@ -12,7 +12,7 @@
 <nav>
 <?php  
     $DIR_PREFIX = '../../';
-    include(dirname(dirname(__DIR_)).'/../../navigation.php');
+    include(__DIR__.'/../../navigation.php');
 ?>
 </nav>
 <br/>
@@ -56,6 +56,6 @@
 
 <br/>
 <br/>
-<?php include(dirname(dirname(__DIR__)).'/../../footer.php');?>
+<?php include(__DIR__.'/../../footer.php');?>
 </body>
 </html>

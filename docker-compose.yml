@@ -1,6 +1,18 @@
 services:
   bgkalendar:
-    image: bgkalendar/bgkalendar
+    image: bgkalendar/bgkalendar:${IMAGE_TAG:-latest}
+    container_name: bgkalendar
+    build:
+      context: .
+      dockerfile: ${DOCKERFILE:-Dockerfile}
+      target: ${BUILD_TARGET:-runtime_no_javadoc}
+      args:
+        TARGETPLATFORM: ${PLATFORM:-linux/amd64}
+    platform: ${PLATFORM:-linux/amd64}
+    environment:
+      - TZ=${TIME_ZONE:-UTC}
+      - CONTAINER_TIMEZONE=${TIME_ZONE:-UTC}
+      - PHP_DATE_TIMEZONE=${TIME_ZONE:-UTC}
     ports:
       - "${PORT_NUMBER:-8387}:80"
     stdin_open: true

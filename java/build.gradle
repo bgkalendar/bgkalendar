@@ -1,23 +1,25 @@
+plugins {
+  id 'java'
+}
+
 group = 'bg.util.leto'
 version = '1.0.0'
 
-apply plugin: 'java'
-
 repositories {
-    mavenCentral()
+  mavenCentral()
 }
 
 dependencies {
-  compile group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.1'
+  implementation group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.1'
 }
 
 task copyToLib(type: Copy) {
-    into "$buildDir/output/lib"
-    from configurations.runtime
+  into "$buildDir/output/lib"
+  from configurations.runtimeClasspath
 }
 
 jar {
-  baseName = "leto"
+  archiveBaseName.set('leto')
 }
 
 sourceSets {
@@ -33,3 +35,14 @@ sourceSets {
   }
 }
 
+tasks.withType(JavaCompile).configureEach {
+  options.encoding = 'UTF-8'
+}
+
+tasks.withType(Javadoc).configureEach {
+  failOnError = false
+  options.encoding = 'UTF-8'
+  options.charSet = 'UTF-8'
+  options.docEncoding = 'UTF-8'
+  options.addStringOption('Xdoclint:none', '-quiet')
+}

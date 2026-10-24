@@ -7,12 +7,10 @@ require dirname(__DIR__) . "/include/" . "imageutils.php";
 function get() {
    global $json_encode_props, $versions, $stable_version, $testing_version;
    header("Content-Type: application/json");
-   handle_version(basename(__DIR__));
+   handle_version(api_version_from_dir(__DIR__));
    $result = array();
    $dates = array();
    $calendars = array();
-   array_push($results, $calendars);
-   array_push($results, $dates);
 
    $requesturi = $_SERVER['REQUEST_URI'];
    $requesturi = $requesturi ? $requesturi : '/';
@@ -64,8 +62,8 @@ if ($method == "GET") {
 } else if ($method == "DELETE") {
   delete();
 } else {
-  $method = $method.replace("\\", "\\\\");
-  $method = $method.replace("'", "\\'");
+  $method = str_replace("\\", "\\\\", $method);
+  $method = str_replace("'", "\\'", $method);
   http_exit(405, "Method '" . $method . "' not allowed. Allowed methods are 'GET', 'POST', 'PUT' and 'DELETE'.");
 }
 ?>
