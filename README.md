@@ -1,4 +1,10 @@
 Welcome to the Bulgarian Calendar Project
+
+> **Status (checked 2026-10-24): DEPLOYED, stable.** Runs on obretenov as
+> container `bgkalendar` (image `bgkalendar/bgkalendar:latest`, host port 8387),
+> proxied by devops-consulting (`/bgkalendar`, `/api`). Last code change 2026-05-23;
+> no changes needed — the doc below is build/reference material.
+
 =========================================
 
 <!-- Please use markdown-toc -i README.md to update the table of contents -->
